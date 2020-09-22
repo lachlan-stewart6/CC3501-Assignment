@@ -1,0 +1,14 @@
+Added Component: Designator=S?(AYZ0102AGRLC)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Arrow Part Number"; Value = "AYZ0102AGRLC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Arrow Price/Stock"; Value = "https://www.arrow.com/en/products/ayz0102agrlc/ck"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Datasheet Link"; Value = "https://componentsearchengine.com/Datasheets/3/AYZ0102AGRLC.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Height"; Value = "1mm"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Name"; Value = "C & K COMPONENTS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer_Part_Number"; Value = "AYZ0102AGRLC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Part Number"; Value = "611-AYZ0102AGRLC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mouser Price/Stock"; Value = "https://www.mouser.co.uk/ProductDetail/CK/AYZ0102AGRLC?qs=dJbzCyn%252BCFYWKwcWEToS6A%3D%3D"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Charging Pin=S?-1
+Added Pin To Net: NetName=NetC7_1 Pin=S?-2
+Added Member To Class: ClassName=schematic_updated Member=Component S? AYZ0102AGRLC
+Added Room: Name=schematic_updated
