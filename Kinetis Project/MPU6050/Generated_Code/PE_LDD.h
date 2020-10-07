@@ -6,7 +6,7 @@
 **     Version     : Component 01.009, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 15:32, # CodeGen: 1
+**     Date/Time   : 2020-10-07, 22:24, # CodeGen: 3
 **     Abstract    :
 **
 **     Settings    :
@@ -66,6 +66,9 @@
 #include "FC321.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
+#include "Term1.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 
 
 /*

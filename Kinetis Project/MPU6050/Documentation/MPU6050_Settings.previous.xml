@@ -477,7 +477,7 @@ PE_DEBUGHALT();
           <Methods>
             <Init v="generate code" />
             <Deinit v="don&amp;apos;t generate code" />
-            <Enable v="don&amp;apos;t generate code" />
+            <Enable v="generate code" />
             <Disable v="don&amp;apos;t generate code" />
             <Reset v="generate code" />
             <GetTimeUS v="generate code" />
@@ -494,7 +494,7 @@ PE_DEBUGHALT();
       </group>
     </Properties>
     <Methods>
-      <Enable v="don&amp;apos;t generate code" />
+      <Enable v="generate code" />
       <Disable v="don&amp;apos;t generate code" />
       <Reset v="generate code" />
       <GetTicks16 v="don&amp;apos;t generate code" />
@@ -552,7 +552,7 @@ PE_DEBUGHALT();
     <Methods>
       <Init v="generate code" />
       <Deinit v="don&amp;apos;t generate code" />
-      <Enable v="don&amp;apos;t generate code" />
+      <Enable v="generate code" />
       <Disable v="don&amp;apos;t generate code" />
       <SetEventMask v="don&amp;apos;t generate code" />
       <GetEventMask v="don&amp;apos;t generate code" />

@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K20P64M50SF0RM Rev. 1, Oct 2011
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 15:32, # CodeGen: 1
+**     Date/Time   : 2020-10-07, 22:24, # CodeGen: 3
 **     Abstract    :
 **
 **     Settings    :
@@ -301,6 +301,9 @@
 #include "FC321.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
+#include "Term1.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -511,6 +514,9 @@ void PE_low_level_init(void)
   CI2C1_Init();
   /* ### RealTime_LDD "RealTimeLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)RealTimeLdd1_Init(NULL);
+  /* ### Asynchro serial "Inhr1" init code ... */
+  Inhr1_Init();
+  /* ###  "Term1" init code ... */
   /* Enable interrupts of the given priority level */
   Cpu_SetBASEPRI(0U);
 }

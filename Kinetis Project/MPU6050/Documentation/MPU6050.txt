@@ -66,6 +66,17 @@ Module "TU1"       (component TimerUnit_LDD)
                 counter is updated to the reload value.   The method is not available if HW doesn't allow resetting of the 
                 counter.
 
+Module "Term1"     (component Term)
+   - Term1_CRLF -Send CRLF to terminal.
+   - Term1_SendStr -Send string to terminal.
+   - Term1_SendNum -Send number to terminal.
+   - Term1_SendChar -Send char to terminal.
+   - Term1_Cls -Clear the terminal window.
+   - Term1_MoveTo -Move cursor to position x, y. Range of coordinates can be from 1 to the size, which depends on the used 
+                terminal. Position [1,1] represents the upper left corner.
+   - Term1_ReadChar -Read char from terminal.
+   - Term1_KeyPressed -Test if char was received from the terminal.
+
 Module "Cpu"       (component MK20DX128EX5)
 
 ===================================================================================

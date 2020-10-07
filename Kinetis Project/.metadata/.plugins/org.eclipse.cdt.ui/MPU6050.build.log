@@ -1,14 +1,6 @@
-22:01:19 **** Incremental Build of configuration Debug for project MPU6050 ****
+23:59:09 **** Incremental Build of configuration Debug for project MPU6050 ****
 make all 
-Building file: ../Sources/main.c
-Invoking: Cross ARM C Compiler
-arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
-../Sources/main.c: In function 'main':
-../Sources/main.c:154:16: error: incompatible types when assigning to type 'short int[512]' from type 'short int (*)[512]'
-  kinetisBuffer = &data;
-                ^
-Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
-make: *** [Sources/main.o] Error 1
+make: Nothing to be done for 'all'.
 
-22:01:19 Build Finished (took 296ms)
+23:59:09 Build Finished (took 205ms)
 

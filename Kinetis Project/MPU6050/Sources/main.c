@@ -35,6 +35,9 @@
 #include "FC321.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
+#include "Term1.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -44,9 +47,10 @@
 #include <stdio.h>
 #include <time.h>
 #include <sys/time.h>
+#include <string.h>
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
-short int data[512];
+int16_t data[128]; // 256 bytes;
 int data_index=0;
 
 void setUpFIFO(){
@@ -58,42 +62,49 @@ void setUpFIFO(){
 	CI2C1_SendBlock(resetDevice, 2, &sent);
 	CI2C1_SendBlock(resetFIFO, 2, &sent);
 
-	byte setClock[2] = {0x6B, 1};
+	byte setClock[2] = {0x6B, 1<<0};
 	CI2C1_SendBlock(setClock, 2, &sent);
 
 	byte setDLPF[2] = {0x1A, 1<<1}; //DLPF to make f = 1kHz
 
 	// tells which registers are being written to the FIFO buffer
-	byte enableFIFO[2] = {0x23, 0x78};  // bits 3-6 are 1's, change to bit shifting
+	byte enableFIFO[2] = {0x23, (1<<6)|(1<<5)|(1<<4)|(1<<3)};  // bits 3-6 are 1's, change to bit shifting
 	CI2C1_SendBlock(enableFIFO, 2, &sent);
 
-	int FIFO_channels = 6; // 6 short ints (12 bytes) of data being read from the FIFO buffer
+	short int FIFO_channels = 6; // 6 short ints (12 bytes) of data being read from the FIFO buffer
 
 	byte userControl[2] = {0x6A, 1<<6};
 	CI2C1_SendBlock(userControl, 2, &sent);  // enable FIFO
-
-	// wait 10ms
-	// read 10 lots of 12 bytes from the fifo buffer
 }
-int getFIFOcount(){
-	word sent, recv;
-	byte FIFOcounts[2] = {0x72, 1};
-	int counts;
-	CI2C1_SendBlock(FIFOcounts, 2, &sent);
-	CI2C1_RecvBlock(&counts, 2, &recv);
+short int getFIFOcount(){
+	word recv;
+	byte FIFOcounts = 0x72; // unsure if supposed to send 1
+	short int counts, counts_LSB, counts_MSB;
+	CI2C1_SendChar(FIFOcounts);
+
+	// this code gave counts = 88;
+	//CI2C1_RecvChar(&counts_MSB);
+	//CI2C1_RecvChar(&counts_LSB);
+	//counts = (counts_MSB<<8)|(counts_LSB<<0);
+
+	// this code gave counts = 0
+	// CI2C1_RecvBlock(&counts, 2, &recv);
+
 	return counts;
 }
 
 void getFIFOData(int counts){
+	Term1_SendStr("Starting to read FIFO buffer\r\n");
 	word sent, recv;
 	byte blocks_32 = counts/32;
 	byte extra = counts - blocks_32*32;
-	byte readFIFO[2] = {0x74, 1};
+	byte readFIFO = 0x74;
 
 	for (int i=0; i<blocks_32; i++){
-		CI2C1_SendBlock(readFIFO, 2, &sent);
-		for (int j=0; j<32/2;i++){
+		CI2C1_SendChar(readFIFO);
+		for (int j=0; j<32/2;j++){
 			CI2C1_RecvBlock(&data[data_index], 2, &recv);
+			data_index++;
 		}
 	}
 }
@@ -109,7 +120,7 @@ int main(void)
 
   /* Write your code here */
   /* For example: for(;;) { } */
-
+  	Term1_SendStr("working\r\n\r\n");
 	word sent;
 	word recv;
 	byte response=0;
@@ -129,7 +140,7 @@ int main(void)
 	byte ACCEL_XOUT_H = 0x3B;
 	byte GYRO_XOUT_H = 0x43;
 
-    FC321_Enable();
+
 	float elapsedTime = 0.001; // 1ms for f=1kHz
 
 	CI2C1_SendBlock(enable, 2, &sent);// Enable MPU
@@ -139,20 +150,41 @@ int main(void)
 	CI2C1_RecvChar(&response);  // WHO am I register should read 0x68
 
 	setUpFIFO();
+	char printThing[100];
+	sprintf(printThing, "FIFO Setup (expecting 104): %i\r\n", response);
+	Term1_SendStr(printThing);
+	Term1_SendStr("Waiting 10ms\r\n");
+	FC321_Enable();
 	FC321_Reset();
 	word time = 0;
-	while (time <= 10000){ // wait for 10ms
+	while (time <= 5000){ // wait for 5ms
 		FC321_GetTimeUS(&time);
 	}
 
 	byte disableFIFO[2] = {0x6A, 0<<7};  // send 0 to FIFO_en
 	CI2C1_SendBlock(disableFIFO, 2, &sent);
-
+	Term1_SendStr("Finished waiting...\r\nNow reading...\r\n");
 	// read and print FIFO buffer
-	int counts = getFIFOcount();
+	short int counts = getFIFOcount();
+	sprintf(printThing, "Read %i short ints from the FIFO buffer\r\n", counts/2);
+	Term1_SendStr(printThing);
 	getFIFOData(counts/2);
-	kinetisBuffer = &data;
-	fprintf(stderr, "sug mah");
+
+	for(int i=0;i<data_index;i+=6){
+		Term1_SendNum(data[i]);
+		Term1_SendChar('\t');
+	    Term1_SendNum(data[i+1]);
+	    Term1_SendChar('\t');
+	    Term1_SendNum(data[i+2]);
+	    Term1_SendChar('\t');
+	    Term1_SendNum(data[i+3]);
+	    Term1_SendChar('\t');
+	    Term1_SendNum(data[i+4]);
+	    Term1_SendChar('\t');
+	    Term1_SendNum(data[i+5]);
+	    Term1_SendStr("\r\n");
+	  }
+	Term1_SendStr("Finished");
 /*
 	for(;;){
 		// read accelerometer values

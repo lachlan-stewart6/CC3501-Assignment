@@ -38,6 +38,9 @@
 #include "FC321.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
+#include "Term1.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
 
 #ifdef __cplusplus
 extern "C" {
