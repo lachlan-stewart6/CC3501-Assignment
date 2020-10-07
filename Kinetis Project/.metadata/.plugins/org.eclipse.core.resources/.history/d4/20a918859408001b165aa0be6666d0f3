@@ -46,7 +46,7 @@
 #include <sys/time.h>
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
-short int data[512];
+int16_t data[512];
 int data_index=0;
 
 void setUpFIFO(){
@@ -115,7 +115,7 @@ int main(void)
 	byte response=0;
 	byte acc[6];
 	byte gyro[6];
-	short int kinetisBuffer[512];
+	byte kinetisBuffer[512];
 	float PI = 3.141592654;
 	float AccX, AccY, AccZ;
 	float accAngleX = 0, accAngleY = 0;
@@ -151,7 +151,7 @@ int main(void)
 	// read and print FIFO buffer
 	int counts = getFIFOcount();
 	getFIFOData(counts/2);
-	kinetisBuffer = &data;
+	kinetisBuffer = data;
 	fprintf(stderr, "sug mah");
 /*
 	for(;;){

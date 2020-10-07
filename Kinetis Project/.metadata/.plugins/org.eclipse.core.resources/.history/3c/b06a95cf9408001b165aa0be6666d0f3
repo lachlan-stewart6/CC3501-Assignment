@@ -151,7 +151,7 @@ int main(void)
 	// read and print FIFO buffer
 	int counts = getFIFOcount();
 	getFIFOData(counts/2);
-	kinetisBuffer = &data;
+	kinetisBuffer = data;
 	fprintf(stderr, "sug mah");
 /*
 	for(;;){

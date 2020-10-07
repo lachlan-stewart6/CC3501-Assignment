@@ -46,7 +46,7 @@
 #include <sys/time.h>
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
-short int data[512];
+int16_t data[512];
 int data_index=0;
 
 void setUpFIFO(){
@@ -84,7 +84,7 @@ int getFIFOcount(){
 	return counts;
 }
 
-void getFIFOData(int counts){
+byte * getFIFOData(int counts, byte kinetisBuffer[512], int kinetisBufferIndex){
 	word sent, recv;
 	byte blocks_32 = counts/32;
 	byte extra = counts - blocks_32*32;
@@ -93,9 +93,10 @@ void getFIFOData(int counts){
 	for (int i=0; i<blocks_32; i++){
 		CI2C1_SendBlock(readFIFO, 2, &sent);
 		for (int j=0; j<32/2;i++){
-			CI2C1_RecvBlock(&data[data_index], 2, &recv);
+			CI2C1_RecvBlock(&kinetisBuffer[kinetisBufferIndex], 2, &recv);
 		}
 	}
+	return kinetisBuffer;
 }
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
@@ -115,7 +116,8 @@ int main(void)
 	byte response=0;
 	byte acc[6];
 	byte gyro[6];
-	short int kinetisBuffer[512];
+	byte kinetisBuffer[512];
+	int kinetisBufferIndex = 0;
 	float PI = 3.141592654;
 	float AccX, AccY, AccZ;
 	float accAngleX = 0, accAngleY = 0;
@@ -150,8 +152,7 @@ int main(void)
 
 	// read and print FIFO buffer
 	int counts = getFIFOcount();
-	getFIFOData(counts/2);
-	kinetisBuffer = &data;
+	kinetisBuffer = getFIFOData(counts/2, kinetisBuffer, kinetisBufferIndex);
 	fprintf(stderr, "sug mah");
 /*
 	for(;;){
