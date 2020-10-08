@@ -48,33 +48,30 @@
 #include <time.h>
 #include <sys/time.h>
 #include <string.h>
+#include <MPU6050.h>
 /* User includes (#include below this line is not maintained by Processor Expert) */
-
 int16_t data[128]; // 256 bytes;
 int data_index=0;
 
 void setUpFIFO(){
 	word sent, recv;
 
-	byte resetDevice[2] = {0x6B, 1<<7};
-	byte resetFIFO[2] = {0x6A, 1<<2};
+	byte resetDevice[2] = {0x6B, 1<<DEVICE_RESET};
+	byte resetFIFO[2] = {0x6A, 1<<FIFO_RESET};
 
 	CI2C1_SendBlock(resetDevice, 2, &sent);
 	CI2C1_SendBlock(resetFIFO, 2, &sent);
 
-	byte setClock[2] = {0x6B, 1<<0};
+	byte setClock[2] = {0x6B, 1<<CLKSEL};
 	CI2C1_SendBlock(setClock, 2, &sent);
 
-	byte setDLPF[2] = {0x1A, 1<<1}; //DLPF to make f = 1kHz
+	byte setDLPF[2] = {0x1A, 1<<DLPF_BW_180}; //DLPF to make f = 1kHz
 
 	// tells which registers are being written to the FIFO buffer
-	byte enableFIFO[2] = {0x23, (1<<6)|(1<<5)|(1<<4)|(1<<3)};  // bits 3-6 are 1's, change to bit shifting
+	byte enableFIFO[2] = {0x23, (1<<XG_FIFO_EN)|(1<<YG_FIFO_EN)|(1<<ZG_FIFO_EN)|(1<<ACCEL_FIFO_EN)};  // bits 3-6 are 1's, change to bit shifting
 	CI2C1_SendBlock(enableFIFO, 2, &sent);
 
-	short int FIFO_channels = 6; // 6 short ints (12 bytes) of data being read from the FIFO buffer
 
-	byte userControl[2] = {0x6A, 1<<6};
-	CI2C1_SendBlock(userControl, 2, &sent);  // enable FIFO
 }
 short int getFIFOcount(){
 	word recv;
@@ -96,13 +93,13 @@ short int getFIFOcount(){
 void getFIFOData(int counts){
 	Term1_SendStr("Starting to read FIFO buffer\r\n");
 	word sent, recv;
-	byte blocks_32 = counts/32;
-	byte extra = counts - blocks_32*32;
+	byte blocks_12 = counts/12;
+	byte extra = counts - blocks_12*12;
 	byte readFIFO = 0x74;
 
-	for (int i=0; i<blocks_32; i++){
+	for (int i=0; i<blocks_12; i++){
 		CI2C1_SendChar(readFIFO);
-		for (int j=0; j<32/2;j++){
+		for (int j=0; j<12/2;j++){
 			CI2C1_RecvBlock(&data[data_index], 2, &recv);
 			data_index++;
 		}
@@ -137,36 +134,49 @@ int main(void)
 	byte enable[2]={0x6B, 0};
 
 	byte WHO_AM_I=0x75;
-	byte ACCEL_XOUT_H = 0x3B;
-	byte GYRO_XOUT_H = 0x43;
 
-
+	short int FIFO_channels = 6; // 6 short ints (12 bytes) of data being read from the FIFO buffer
 	float elapsedTime = 0.001; // 1ms for f=1kHz
-
+	float start, stop, time;
 	CI2C1_SendBlock(enable, 2, &sent);// Enable MPU
 
 	// Check connection by reading WHO am I register
 	CI2C1_SendChar(WHO_AM_I);
 	CI2C1_RecvChar(&response);  // WHO am I register should read 0x68
+	char printThing[100];
+	sprintf(printThing, "MPU Setup (expecting 104): %i\r\n", response);
+	Term1_SendStr(printThing);
+	FC321_Enable();
 
 	setUpFIFO();
-	char printThing[100];
-	sprintf(printThing, "FIFO Setup (expecting 104): %i\r\n", response);
-	Term1_SendStr(printThing);
-	Term1_SendStr("Waiting 10ms\r\n");
-	FC321_Enable();
+
 	FC321_Reset();
-	word time = 0;
-	while (time <= 5000){ // wait for 5ms
+	FC321_GetTimeUS(&start);
+	byte userControl[2] = {0x6A, 1<<FIFO_EN_BIT};   // enable FIFO
+	if (ERR_OK == CI2C1_SendBlock(userControl, 2, &sent)){
+		// terminal confirmation of FIFO setup
+		//Term1_SendStr("FIFO Setup Successful/r/n");
+	} else {
+		// terminal something fucked up
+		//Term1_SendStr("no good/r/n");
+	}
+	while (time <= 10000){ // wait for 10ms
 		FC321_GetTimeUS(&time);
 	}
 
 	byte disableFIFO[2] = {0x6A, 0<<7};  // send 0 to FIFO_en
 	CI2C1_SendBlock(disableFIFO, 2, &sent);
-	Term1_SendStr("Finished waiting...\r\nNow reading...\r\n");
+
+	FC321_GetTimeUS(&stop);
+	Term1_SendStr("Time elapsed (expecting 10): ");
+	Term1_SendNum((stop-start)/1000);
+	Term1_SendStr("\r\n");
+
 	// read and print FIFO buffer
+
+
 	short int counts = getFIFOcount();
-	sprintf(printThing, "Read %i short ints from the FIFO buffer\r\n", counts/2);
+	sprintf(printThing, "Read %i short ints from the FIFO buffer (expecting 120)\r\n", counts/2);
 	Term1_SendStr(printThing);
 	getFIFOData(counts/2);
 

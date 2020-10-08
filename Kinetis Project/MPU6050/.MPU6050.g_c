@@ -372,7 +372,7 @@
     </GenFiles>
     <SignalListFile>Documentation\MPU6050_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>4</ProjectModificationStamp>
+    <ProjectModificationStamp>5</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>false</Generated>
@@ -1473,8 +1473,8 @@
       <GenComponentVersion>02.611</GenComponentVersion>
       <GenDriverVersion>01.01</GenDriverVersion>
       <GenEventModule>Events</GenEventModule>
-      <HeaderAge>1363653382</HeaderAge>
-      <CodeAge>1363653382</CodeAge>
+      <HeaderAge>1363701082</HeaderAge>
+      <CodeAge>1363701082</CodeAge>
       <AsemblAge>-1</AsemblAge>
       <GenNumMethods>24</GenNumMethods>
       <Enable>false</Enable>
@@ -1620,8 +1620,8 @@
         <GenComponentVersion>01.188</GenComponentVersion>
         <GenDriverVersion>01.12</GenDriverVersion>
         <GenEventModule>Events</GenEventModule>
-        <HeaderAge>1363653382</HeaderAge>
-        <CodeAge>1363653382</CodeAge>
+        <HeaderAge>1363701082</HeaderAge>
+        <CodeAge>1363701082</CodeAge>
         <AsemblAge>-1</AsemblAge>
         <GenNumMethods>36</GenNumMethods>
         <Init>true</Init>
