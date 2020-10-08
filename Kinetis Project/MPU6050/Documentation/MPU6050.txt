@@ -46,8 +46,20 @@ Module "CI2C1"     (component InternalI2C)
                 method directs to or from selected device, until a new slave device is selected by this method. This method is 
                 not available for the SLAVE mode.
 
+Module "Term1"     (component Term)
+   - Term1_CRLF -Send CRLF to terminal.
+   - Term1_SendStr -Send string to terminal.
+   - Term1_SendNum -Send number to terminal.
+   - Term1_SendChar -Send char to terminal.
+   - Term1_Cls -Clear the terminal window.
+   - Term1_MoveTo -Move cursor to position x, y. Range of coordinates can be from 1 to the size, which depends on the used 
+                terminal. Position [1,1] represents the upper left corner.
+   - Term1_ReadChar -Read char from terminal.
+   - Term1_KeyPressed -Test if char was received from the terminal.
+
 Module "FC321"     (component FreeCntr32)
    - FC321_Enable -This method enables the component - the internal clocks are counted.
+   - FC321_Disable -This method disables the component - the internal clocks are not counted.
    - FC321_Reset -This method clears the counter.
    - FC321_GetTimeUS -This method returns the time (as a 16-bit unsigned integer) in microseconds since the last resetting 
                 after the last reset.
@@ -62,20 +74,22 @@ Module "TU1"       (component TimerUnit_LDD)
                 second call of Init the <Deinit> must be called first.
    - TU1_Enable -Enables the component - it starts the signal generation. Events may be generated (see SetEventMask). The 
                 method is not available if the counter can't be disabled/enabled by HW.
+   - TU1_Disable -Disables the component - it stops signal generation and events calling. The method is not available if the 
+                counter can't be disabled/enabled by HW.
    - TU1_ResetCounter -Resets counter. If counter is counting up then it is set to zero. If counter is counting down then 
                 counter is updated to the reload value.   The method is not available if HW doesn't allow resetting of the 
                 counter.
 
-Module "Term1"     (component Term)
-   - Term1_CRLF -Send CRLF to terminal.
-   - Term1_SendStr -Send string to terminal.
-   - Term1_SendNum -Send number to terminal.
-   - Term1_SendChar -Send char to terminal.
-   - Term1_Cls -Clear the terminal window.
-   - Term1_MoveTo -Move cursor to position x, y. Range of coordinates can be from 1 to the size, which depends on the used 
-                terminal. Position [1,1] represents the upper left corner.
-   - Term1_ReadChar -Read char from terminal.
-   - Term1_KeyPressed -Test if char was received from the terminal.
+Module "WAIT1"     (component Wait)
+   - WAIT1_Wait10Cycles -Wait for 10 CPU cycles.
+   - WAIT1_Wait100Cycles -Wait for 100 CPU cycles.
+   - WAIT1_WaitCycles -Wait for a specified number of CPU cycles (16bit data type).
+   - WAIT1_WaitLongCycles -Wait for a specified number of CPU cycles (32bit data type).
+   - WAIT1_Waitms -Wait for a specified time in milliseconds.
+   - WAIT1_Waitus -Wait for a specified time in microseconds.
+   - WAIT1_Waitns -Wait for a specified time in nano seconds.
+   - WAIT1_WaitOSms -If an RTOS is enabled, this routine will use a non-blocking wait method. Otherwise it will do a 
+                busy/blocking wait.
 
 Module "Cpu"       (component MK20DX128EX5)
 

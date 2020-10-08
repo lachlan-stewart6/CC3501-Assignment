@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K20P64M50SF0RM Rev. 1, Oct 2011
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 22:24, # CodeGen: 3
+**     Date/Time   : 2020-10-08, 23:33, # CodeGen: 11
 **     Abstract    :
 **
 **     Settings    :
@@ -205,8 +205,7 @@
 **              CLKOUT pin control                         : Disabled
 **              Clock gating control                       : Disabled
 **          CPU interrupts/resets                          : 
-**            NMI interrupt                                : Enabled
-**              Interrupt                                  : INT_NMI
+**            NMI interrupt                                : Disabled
 **            Hard Fault                                   : Disabled
 **            Bus Fault                                    : Disabled
 **            Usage Fault                                  : Disabled
@@ -298,12 +297,13 @@
 /* {Default RTOS Adapter} No RTOS includes */
 #include "CI2C1.h"
 #include "IntI2cLdd1.h"
-#include "FC321.h"
-#include "RealTimeLdd1.h"
-#include "TU1.h"
 #include "Term1.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
+#include "FC321.h"
+#include "RealTimeLdd1.h"
+#include "TU1.h"
+#include "WAIT1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -332,20 +332,6 @@ void Cpu_SetBASEPRI(uint32_t Level);
 
 /*
 ** ===================================================================
-**     Method      :  Cpu_INT_NMIInterrupt (component MK20DX128EX5)
-**
-**     Description :
-**         This ISR services the Non Maskable Interrupt interrupt.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
-PE_ISR(Cpu_INT_NMIInterrupt)
-{
-  Cpu_OnNMIINT();
-}
-
-/*
-** ===================================================================
 **     Method      :  Cpu_Cpu_Interrupt (component MK20DX128EX5)
 **
 **     Description :
@@ -356,7 +342,6 @@ PE_ISR(Cpu_INT_NMIInterrupt)
 PE_ISR(Cpu_Interrupt)
 {
   /* This code can be changed using the CPU component property "Build Options / Unhandled int code" */
-  PE_DEBUGHALT();
 }
 
 
@@ -512,11 +497,11 @@ void PE_low_level_init(void)
   NVICIP8 = NVIC_IP_PRI8(0x00);
   /* ### InternalI2C "CI2C1" init code ... */
   CI2C1_Init();
-  /* ### RealTime_LDD "RealTimeLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
-  (void)RealTimeLdd1_Init(NULL);
   /* ### Asynchro serial "Inhr1" init code ... */
   Inhr1_Init();
   /* ###  "Term1" init code ... */
+  /* ### RealTime_LDD "RealTimeLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)RealTimeLdd1_Init(NULL);
   /* Enable interrupts of the given priority level */
   Cpu_SetBASEPRI(0U);
 }

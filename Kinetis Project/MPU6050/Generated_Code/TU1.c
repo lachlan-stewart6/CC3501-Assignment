@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 15:33, # CodeGen: 2
+**     Date/Time   : 2020-10-08, 22:39, # CodeGen: 9
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -52,6 +52,7 @@
 **     Contents    :
 **         Init         - LDD_TDeviceData* TU1_Init(LDD_TUserData *UserDataPtr);
 **         Enable       - LDD_TError TU1_Enable(LDD_TDeviceData *DeviceDataPtr);
+**         Disable      - LDD_TError TU1_Disable(LDD_TDeviceData *DeviceDataPtr);
 **         ResetCounter - LDD_TError TU1_ResetCounter(LDD_TDeviceData *DeviceDataPtr);
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
@@ -236,6 +237,32 @@ LDD_TError TU1_Enable(LDD_TDeviceData *DeviceDataPtr)
   TU1_TDeviceData *DeviceDataPrv = (TU1_TDeviceData *)DeviceDataPtr;
 
   FTM_PDD_SelectPrescalerSource(FTM0_BASE_PTR, DeviceDataPrv->Source); /* Enable the device */
+  return ERR_OK;
+}
+
+/*
+** ===================================================================
+**     Method      :  TU1_Disable (component TimerUnit_LDD)
+*/
+/*!
+**     @brief
+**         Disables the component - it stops signal generation and
+**         events calling. The method is not available if the counter
+**         can't be disabled/enabled by HW.
+**     @param
+**         DeviceDataPtr   - Device data structure
+**                           pointer returned by [Init] method.
+**     @return
+**                         - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - The component does not work in
+**                           the active clock configuration
+*/
+/* ===================================================================*/
+LDD_TError TU1_Disable(LDD_TDeviceData *DeviceDataPtr)
+{
+  (void)DeviceDataPtr;                 /* Parameter is not used, suppress unused argument warning */
+  FTM_PDD_SelectPrescalerSource(FTM0_BASE_PTR, FTM_PDD_DISABLED);
   return ERR_OK;
 }
 

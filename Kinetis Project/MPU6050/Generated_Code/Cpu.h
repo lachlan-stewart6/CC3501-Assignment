@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K20P64M50SF0RM Rev. 1, Oct 2011
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 15:31, # CodeGen: 0
+**     Date/Time   : 2020-10-08, 14:01, # CodeGen: 5
 **     Abstract    :
 **
 **     Settings    :
@@ -81,7 +81,6 @@ extern "C" {
 /* Methods configuration constants - generated for all enabled component's methods */
 
 /* Events configuration constants - generated for all enabled component's events */
-#define Cpu_OnNMIINT_EVENT_ENABLED
 
 #define CPU_BUS_CLK_HZ                  20971520U /* Initial value of the bus clock frequency in Hz */
 #define CPU_CORE_CLK_HZ                 20971520U /* Initial value of the core/system clock frequency in Hz.  */
@@ -158,18 +157,6 @@ extern volatile uint8_t SR_lock;
 ** ===================================================================
 */
 void PE_low_level_init(void);
-
-/* {Default RTOS Adapter} ISR function prototype */
-PE_ISR(Cpu_INT_NMIInterrupt);
-/*
-** ===================================================================
-**     Method      :  Cpu_INT_NMIInterrupt (component MK20DX128EX5)
-**
-**     Description :
-**         This ISR services the Non Maskable Interrupt interrupt.
-**         This method is internal. It is used by Processor Expert only.
-** ===================================================================
-*/
 
 PE_ISR(Cpu_Interrupt);
 /*

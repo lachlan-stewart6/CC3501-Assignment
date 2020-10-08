@@ -36,24 +36,6 @@ extern "C" {
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 
-/*
-** ===================================================================
-**     Event       :  Cpu_OnNMIINT (module Events)
-**
-**     Component   :  Cpu [MK20DX128EX5]
-*/
-/*!
-**     @brief
-**         This event is called when the Non maskable interrupt had
-**         occurred. This event is automatically enabled when the [NMI
-**         interrupt] property is set to 'Enabled'.
-*/
-/* ===================================================================*/
-void Cpu_OnNMIINT(void)
-{
-  /* Write your code here ... */
-}
-
 /* END Events */
 
 #ifdef __cplusplus

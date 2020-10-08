@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 15:33, # CodeGen: 2
+**     Date/Time   : 2020-10-08, 22:39, # CodeGen: 9
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -52,6 +52,7 @@
 **     Contents    :
 **         Init         - LDD_TDeviceData* TU1_Init(LDD_TUserData *UserDataPtr);
 **         Enable       - LDD_TError TU1_Enable(LDD_TDeviceData *DeviceDataPtr);
+**         Disable      - LDD_TError TU1_Disable(LDD_TDeviceData *DeviceDataPtr);
 **         ResetCounter - LDD_TError TU1_ResetCounter(LDD_TDeviceData *DeviceDataPtr);
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
@@ -134,6 +135,7 @@ extern "C" {
 /* Methods configuration constants - generated for all enabled component's methods */
 #define TU1_Init_METHOD_ENABLED        /*!< Init method of the component TU1 is enabled (generated) */
 #define TU1_Enable_METHOD_ENABLED      /*!< Enable method of the component TU1 is enabled (generated) */
+#define TU1_Disable_METHOD_ENABLED     /*!< Disable method of the component TU1 is enabled (generated) */
 #define TU1_ResetCounter_METHOD_ENABLED /*!< ResetCounter method of the component TU1 is enabled (generated) */
 
 /* Events configuration constants - generated for all enabled component's events */
@@ -187,6 +189,27 @@ LDD_TDeviceData* TU1_Init(LDD_TUserData *UserDataPtr);
 */
 /* ===================================================================*/
 LDD_TError TU1_Enable(LDD_TDeviceData *DeviceDataPtr);
+
+/*
+** ===================================================================
+**     Method      :  TU1_Disable (component TimerUnit_LDD)
+*/
+/*!
+**     @brief
+**         Disables the component - it stops signal generation and
+**         events calling. The method is not available if the counter
+**         can't be disabled/enabled by HW.
+**     @param
+**         DeviceDataPtr   - Device data structure
+**                           pointer returned by [Init] method.
+**     @return
+**                         - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - The component does not work in
+**                           the active clock configuration
+*/
+/* ===================================================================*/
+LDD_TError TU1_Disable(LDD_TDeviceData *DeviceDataPtr);
 
 /*
 ** ===================================================================

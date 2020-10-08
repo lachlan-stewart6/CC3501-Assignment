@@ -6,7 +6,7 @@
 **     Version     : Component 01.009, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 22:24, # CodeGen: 3
+**     Date/Time   : 2020-10-08, 23:33, # CodeGen: 11
 **     Abstract    :
 **
 **     Settings    :
@@ -63,12 +63,13 @@
 #include "PE_Const.h"
 #include "CI2C1.h"
 #include "IntI2cLdd1.h"
-#include "FC321.h"
-#include "RealTimeLdd1.h"
-#include "TU1.h"
 #include "Term1.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
+#include "FC321.h"
+#include "RealTimeLdd1.h"
+#include "TU1.h"
+#include "WAIT1.h"
 
 
 /*

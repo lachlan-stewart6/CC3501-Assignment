@@ -28,9 +28,9 @@
 
 \page page_components Components 
 - \subpage IntI2cLdd1
+- \subpage ASerialLdd1
 - \subpage TU1
 - \subpage RealTimeLdd1
-- \subpage ASerialLdd1
 
 */
 

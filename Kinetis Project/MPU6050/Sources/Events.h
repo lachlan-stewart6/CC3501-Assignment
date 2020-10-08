@@ -35,32 +35,17 @@
 #include "IO_Map.h"
 #include "CI2C1.h"
 #include "IntI2cLdd1.h"
-#include "FC321.h"
-#include "RealTimeLdd1.h"
-#include "TU1.h"
 #include "Term1.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
+#include "FC321.h"
+#include "RealTimeLdd1.h"
+#include "TU1.h"
+#include "WAIT1.h"
 
 #ifdef __cplusplus
 extern "C" {
 #endif 
-
-/*
-** ===================================================================
-**     Event       :  Cpu_OnNMIINT (module Events)
-**
-**     Component   :  Cpu [MK20DX128EX5]
-*/
-/*!
-**     @brief
-**         This event is called when the Non maskable interrupt had
-**         occurred. This event is automatically enabled when the [NMI
-**         interrupt] property is set to 'Enabled'.
-*/
-/* ===================================================================*/
-void Cpu_OnNMIINT(void);
-
 
 /* END Events */
 

@@ -1,3 +1,13 @@
+/*
+ * mpu6050.h
+ *
+ *  Created on: 8 Oct 2020
+ *      Author: jc299375
+ */
+
+#ifndef SOURCES_MPU6050_H_
+#define SOURCES_MPU6050_H_
+
 //Registers
 #define CONFIG 0x1A //FRAME SYN and LOW Pass filter
 #define DLPF_CONFIG 0
@@ -88,3 +98,9 @@
 #define I2C_MST_CTRL 0x24
 
 #define SMPRT_DIV 0x19
+
+#define WHO_AM_I 0x75
+
+
+
+#endif /* SOURCES_MPU6050_H_ */

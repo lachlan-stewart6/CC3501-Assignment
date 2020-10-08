@@ -7,7 +7,7 @@
 **     Version     : Component 02.070, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 15:33, # CodeGen: 2
+**     Date/Time   : 2020-10-08, 22:39, # CodeGen: 9
 **     Abstract    :
 **         This device "FreeCntr32" implements 32-bit Free Running Counter
 **     Settings    :
@@ -30,6 +30,7 @@
 **            RealTime_LDD                                 : RealTime_LDD
 **     Contents    :
 **         Enable    - byte FC321_Enable(void);
+**         Disable   - byte FC321_Disable(void);
 **         Reset     - byte FC321_Reset(void);
 **         GetTimeUS - byte FC321_GetTimeUS(word *Time);
 **         GetTimeMS - byte FC321_GetTimeMS(word *Time);
@@ -109,6 +110,23 @@
 */
 /* ===================================================================*/
 #define FC321_Enable() (RealTimeLdd1_Enable(RealTimeLdd1_DeviceData))
+
+/*
+** ===================================================================
+**     Method      :  FC321_Disable (component FreeCntr32)
+*/
+/*!
+**     @brief
+**         This method disables the component - the internal clocks are
+**         not counted.
+**     @return
+**                         - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - This device does not work in
+**                           the active speed mode
+*/
+/* ===================================================================*/
+#define FC321_Disable() (RealTimeLdd1_Disable(RealTimeLdd1_DeviceData))
 
 /*
 ** ===================================================================

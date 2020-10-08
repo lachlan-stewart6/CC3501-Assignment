@@ -7,7 +7,7 @@
 **     Version     : Component 01.007, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 15:33, # CodeGen: 2
+**     Date/Time   : 2020-10-08, 22:39, # CodeGen: 9
 **     Abstract    :
 **          This component "RealTime_LDD" implements a free running counter
 **          for time measurement.
@@ -41,6 +41,7 @@
 **     Contents    :
 **         Init      - LDD_TDeviceData* RealTimeLdd1_Init(LDD_TUserData *UserDataPtr);
 **         Enable    - LDD_TError RealTimeLdd1_Enable(LDD_TDeviceData *DeviceDataPtr);
+**         Disable   - LDD_TError RealTimeLdd1_Disable(LDD_TDeviceData *DeviceDataPtr);
 **         Reset     - LDD_TError RealTimeLdd1_Reset(LDD_TDeviceData *DeviceDataPtr);
 **         GetTimeUS - LDD_TError RealTimeLdd1_GetTimeUS(LDD_TDeviceData *DeviceDataPtr, uint16_t...
 **         GetTimeMS - LDD_TError RealTimeLdd1_GetTimeMS(LDD_TDeviceData *DeviceDataPtr, uint16_t...
@@ -184,6 +185,34 @@ LDD_TError RealTimeLdd1_Enable(LDD_TDeviceData *DeviceDataPtr)
   if (!DeviceDataPrv->EnUser) {        /* Is the device disabled by user? */
     DeviceDataPrv->EnUser = TRUE;      /* If yes then set the flag "device enabled" */
     (void)TU1_Enable(DeviceDataPrv->LinkedDeviceDataPtr); /* Enable TimerUnit */
+  }
+  return ERR_OK;
+}
+
+/*
+** ===================================================================
+**     Method      :  RealTimeLdd1_Disable (component RealTime_LDD)
+*/
+/*!
+**     @brief
+**         Disables the component - the internal clocks are not counted.
+**     @param
+**         DeviceDataPtr   - Device data structure
+**                           pointer returned by [Init] method.
+**     @return
+**                         - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_SPEED - The component does not work in
+**                           the active clock configuration
+*/
+/* ===================================================================*/
+LDD_TError RealTimeLdd1_Disable(LDD_TDeviceData *DeviceDataPtr)
+{
+  RealTimeLdd1_TDeviceData *DeviceDataPrv = (RealTimeLdd1_TDeviceData *)DeviceDataPtr;
+
+  if (DeviceDataPrv->EnUser) {         /* Is the device enabled by user? */
+    DeviceDataPrv->EnUser = FALSE;     /* If yes then set the flag "device enabled" */
+   (void)TU1_Disable(DeviceDataPrv->LinkedDeviceDataPtr); /* Disable TimerUnit component */
   }
   return ERR_OK;
 }
