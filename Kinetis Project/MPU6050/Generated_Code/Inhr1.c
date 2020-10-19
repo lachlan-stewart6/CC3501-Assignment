@@ -7,7 +7,7 @@
 **     Version     : Component 02.611, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-08, 13:42, # CodeGen: 4
+**     Date/Time   : 2020-10-19, 22:10, # CodeGen: 18
 **     Abstract    :
 **         This component "AsynchroSerial" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -17,17 +17,17 @@
 **         The component requires one on-chip asynchronous serial channel.
 **     Settings    :
 **          Component name                                 : Inhr1
-**          Channel                                        : UART0
+**          Channel                                        : UART2
 **          Interrupt service/event                        : Disabled
 **          Settings                                       : 
 **            Parity                                       : none
 **            Width                                        : 8 bits
 **            Stop bit                                     : 1
 **            Receiver                                     : Enabled
-**              RxD                                        : TSI0_CH9/PTB16/UART0_RX/EWM_IN
+**              RxD                                        : PTD2/LLWU_P13/SPI0_SOUT/UART2_RX
 **              RxD pin signal                             : 
 **            Transmitter                                  : Enabled
-**              TxD                                        : TSI0_CH10/PTB17/UART0_TX/EWM_OUT_b
+**              TxD                                        : PTD3/SPI0_SIN/UART2_TX
 **              TxD pin signal                             : 
 **            Baud rate                                    : 115200 baud
 **            Break signal                                 : Disabled

@@ -39,6 +39,9 @@
 #include "RealTimeLdd1.h"
 #include "TU1.h"
 #include "WAIT1.h"
+#include "FC322.h"
+#include "RealTimeLdd2.h"
+#include "TU2.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"
@@ -51,6 +54,7 @@
 #include <string.h>
 #include <MPU6050.h>
 #include <preRecordedData.h>
+#include <HMC5883L.h>
 
 /* User includes (#include below this line is not maintained by Processor Expert) */
 int16_t data[128]; // 256 bytes;
@@ -121,6 +125,34 @@ void getFIFOData(int counts){
 	}
 	Term1_SendStr("finished getting FIFO data\r\n");
 }
+
+void sendBT(float pitch, float roll, float yaw, float MagX, float MagY,
+		float MagZ, word elapsedTime) {
+	Term1_MoveTo(1,1);
+	Term1_SendStr("Pitch: ");
+	Term1_SendFloatNum(pitch);
+	Term1_SendStr("\r\n");
+	Term1_SendStr("Roll: ");
+	Term1_SendFloatNum(roll);
+	Term1_SendStr("\r\n");
+	Term1_SendStr("Yaw: ");
+	Term1_SendFloatNum(yaw);
+	Term1_SendStr("\r\n");
+	Term1_SendStr("MagX: ");
+	Term1_SendFloatNum(MagX);
+	Term1_SendStr("\r\n");
+	Term1_SendStr("MagY: ");
+	Term1_SendFloatNum(MagY);
+	Term1_SendStr("\r\n");
+	Term1_SendStr("MagZ: ");
+	Term1_SendFloatNum(MagZ);
+	Term1_SendStr("\r\n");
+	Term1_SendStr("Time(us): ");
+	Term1_SendNum(elapsedTime);
+	Term1_SendStr("\r\n");
+	Term1_Cls();
+}
+
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
 int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
@@ -139,6 +171,9 @@ int main(void)
 	byte response=0;
 	byte acc[6];
 	byte gyro[6];
+	byte mag[6];
+	char MPU_ADDR = 0x68;
+	char HMC_ADDR = 0x1E;
 	float PI = 3.141592654;
 	float AccX, AccY, AccZ;
 	float accAngleX = 0, accAngleY = 0;
@@ -146,17 +181,18 @@ int main(void)
 	float gyroAngleX = 0, gyroAngleY = 0, gyroAngleZ = 0;
 	float MagX = 0, MagY = 0, MagZ = 0;
 	float yaw = 0, pitch = 0, roll = 0;
-	word elapsedTime; //
+	word elapsedTime, bluetoothTime;
 	byte enableFIFO[2] = {USER_CTRL, 1<<FIFO_EN_BIT}; // enable FIFO
 	byte enableMPU[2]={PWR_MGMT_1, 0};
 	byte disableFIFO[2] = {FIFO_EN, 0};  // send 0 to FIFO_en
+	byte singleModeHMC[2] = {MODE, 0x01};
 
 
 	short int FIFO_channels = 6; // 6 short ints (12 bytes) of data being read from the FIFO buffer
 
 	uint16 start, stop, time;
 	CI2C1_SendBlock(enableMPU, 2, &sent);// Enable MPU
-
+	CI2C1_SelectSlave(MPU_ADDR);
 	// Check connection by reading WHO am I register
 	CI2C1_SendChar(WHO_AM_I);
 	CI2C1_RecvChar(&response);  // WHO am I register should read 0x68
@@ -164,6 +200,9 @@ int main(void)
 	char printThing[100];
 	sprintf(printThing, "MPU Setup (expecting 104): %i\r\n", response);
 	Term1_SendStr(printThing);
+
+	CI2C1_SelectSlave(HMC_ADDR);
+	CI2C1_SendBlock(singleModeHMC, 2, &sent); //put mag in single read mode
 	/*
 	setUpFIFO();
 	CI2C1_SendBlock(enableFIFO, 2, &sent); // enable FIFO
@@ -192,6 +231,7 @@ int main(void)
 	FC321_Reset();
 	for(;;){
 		// read accelerometer values
+		CI2C1_SelectSlave(MPU_ADDR);
 		CI2C1_SendChar(ACCEL_XOUT_H);
 		CI2C1_RecvBlock(acc,6,&recv);
 
@@ -221,25 +261,21 @@ int main(void)
 		// https://en.wikipedia.org/wiki/Rotation_matrix
 		// https://www.globalsecurity.org/space/library/report/1997/basicnav.pdf
 
-		Term1_MoveTo(1,1);
+		CI2C1_SelectSlave(HMC_ADDR);
+		CI2C1_SendChar(MAG_X_LSB);
+		CI2C1_RecvBlock(mag, 6, &recv);
 
-		Term1_SendStr("Pitch: ");
-		Term1_SendFloatNum(GyroY);
-		Term1_SendStr("\r\n");
+		MagX = (acc[0]<<8 | acc[1]);  // sensitivity values on datasheet
+		MagZ = (acc[2]<<8 | acc[3]);
+		MagY = (acc[4]<<8 | acc[5]);
 
-		Term1_SendStr("Roll: ");
-		Term1_SendFloatNum(GyroX);
-		Term1_SendStr("\r\n");
+		FC322_GetTimeMS(&bluetoothTime);
+		if (bluetoothTime >= 1000){
+			sendBT(pitch, roll, yaw, MagX, MagY, MagZ, elapsedTime);
+			FC322_Reset();
+		}
 
-		Term1_SendStr("Yaw: ");
-		Term1_SendFloatNum(GyroZ);
-		Term1_SendStr("\r\n");
-
-		Term1_SendStr("Time(us): ");
-		Term1_SendNum(elapsedTime);
-		Term1_SendStr("\r\n");
-		WAIT1_Waitus(10000);
-
+		//sendBT(pitch, roll, yaw, MagX, MagY, MagZ, elapsedTime);
 	}
 	Term1_SendStr("Finished");
 

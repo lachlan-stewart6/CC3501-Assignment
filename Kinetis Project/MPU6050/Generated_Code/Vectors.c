@@ -6,7 +6,7 @@
 **     Version     : Component 01.009, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-08, 23:33, # CodeGen: 11
+**     Date/Time   : 2020-10-19, 22:24, # CodeGen: 21
 **     Abstract    :
 **
 **     Settings    :
@@ -64,6 +64,9 @@
   #include "RealTimeLdd1.h"
   #include "TU1.h"
   #include "WAIT1.h"
+  #include "FC322.h"
+  #include "RealTimeLdd2.h"
+  #include "TU2.h"
   #include "Events.h"
 
 
@@ -125,7 +128,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x27  0x0000009C   -   ivINT_CMP0                    unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x28  0x000000A0   -   ivINT_CMP1                    unused by PE */
     (tIsrFunc)&TU1_Interrupt,          /* 0x29  0x000000A4   8   ivINT_FTM0                    used by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x2A  0x000000A8   -   ivINT_FTM1                    unused by PE */
+    (tIsrFunc)&TU2_Interrupt,          /* 0x2A  0x000000A8   8   ivINT_FTM1                    used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2B  0x000000AC   -   ivINT_CMT                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2C  0x000000B0   -   ivINT_RTC                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2D  0x000000B4   -   ivINT_RTC_Seconds             unused by PE */

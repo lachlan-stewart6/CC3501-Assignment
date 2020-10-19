@@ -31,6 +31,8 @@
 - \subpage ASerialLdd1
 - \subpage TU1
 - \subpage RealTimeLdd1
+- \subpage TU2
+- \subpage RealTimeLdd2
 
 */
 

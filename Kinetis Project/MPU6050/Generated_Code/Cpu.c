@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K20P64M50SF0RM Rev. 1, Oct 2011
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-08, 23:33, # CodeGen: 11
+**     Date/Time   : 2020-10-19, 22:24, # CodeGen: 21
 **     Abstract    :
 **
 **     Settings    :
@@ -304,6 +304,9 @@
 #include "RealTimeLdd1.h"
 #include "TU1.h"
 #include "WAIT1.h"
+#include "FC322.h"
+#include "RealTimeLdd2.h"
+#include "TU2.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -375,8 +378,10 @@ void __init_hardware(void)
   SIM_CLKDIV1 = SIM_CLKDIV1_OUTDIV1(0x00) |
                 SIM_CLKDIV1_OUTDIV2(0x01) |
                 SIM_CLKDIV1_OUTDIV4(0x03); /* Set the system prescalers to safe value */
-  /* SIM_SCGC5: PORTB=1,PORTA=1 */
-  SIM_SCGC5 |= (SIM_SCGC5_PORTB_MASK | SIM_SCGC5_PORTA_MASK); /* Enable clock gate for ports to enable pin routing */
+  /* SIM_SCGC5: PORTD=1,PORTB=1,PORTA=1 */
+  SIM_SCGC5 |= SIM_SCGC5_PORTD_MASK |
+               SIM_SCGC5_PORTB_MASK |
+               SIM_SCGC5_PORTA_MASK;   /* Enable clock gate for ports to enable pin routing */
   if ((PMC_REGSC & PMC_REGSC_ACKISO_MASK) != 0x0U) {
     /* PMC_REGSC: ACKISO=1 */
     PMC_REGSC |= PMC_REGSC_ACKISO_MASK; /* Release IO pads after wakeup from VLLS mode. */
@@ -502,6 +507,8 @@ void PE_low_level_init(void)
   /* ###  "Term1" init code ... */
   /* ### RealTime_LDD "RealTimeLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)RealTimeLdd1_Init(NULL);
+  /* ### RealTime_LDD "RealTimeLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)RealTimeLdd2_Init(NULL);
   /* Enable interrupts of the given priority level */
   Cpu_SetBASEPRI(0U);
 }

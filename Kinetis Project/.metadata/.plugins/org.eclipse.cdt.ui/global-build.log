@@ -531,3 +531,424 @@ Finished building target: MPU6050.elf
 15:17:28 **** Incremental Build of configuration Debug for project MPU6050 ****
 make all 
 make: Nothing to be done for 'all'.
+20:38:56 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:41:37 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:42:59 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:44:28 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+20:58:12 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+21:45:07 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+../Sources/main.c: In function 'main':
+../Sources/main.c:172:20: error: 'HMC_ADDR' undeclared (first use in this function)
+  CI2C1_SelectSlave(HMC_ADDR);
+                    ^
+../Sources/main.c:172:20: note: each undeclared identifier is reported only once for each function it appears in
+../Sources/main.c:173:2: warning: implicit declaration of function 'CI2C_SendChar' [-Wimplicit-function-declaration]
+  CI2C_SendChar(0x02); //select mode register
+  ^
+../Sources/main.c:174:4: error: 'Wire' undeclared (first use in this function)
+    Wire.send(0x00); //continuous measurement mode
+    ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+21:46:06 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+../Sources/main.c: In function 'main':
+../Sources/main.c:173:2: warning: implicit declaration of function 'CI2C_SendBlock' [-Wimplicit-function-declaration]
+  CI2C_SendBlock(singleModeHMC, 2, &sent); //put mag in single read mode
+  ^
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/TU1.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+./Sources/main.o: In function `main':
+C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Debug/../Sources/main.c:173: undefined reference to `CI2C_SendBlock'
+collect2.exe: error: ld returned 1 exit status
+makefile:53: recipe for target 'MPU6050.elf' failed
+make: *** [MPU6050.elf] Error 1
+21:46:21 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/TU1.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:00:00 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/TU1.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:00:13 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:00:43 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:10:20 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/Events.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/Events.d" -MT"Sources/Events.o" -c -o "Sources/Events.o" "../Sources/Events.c"
+Finished building: ../Sources/Events.c
+ 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building file: ../Generated_Code/ASerialLdd1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/ASerialLdd1.d" -MT"Generated_Code/ASerialLdd1.o" -c -o "Generated_Code/ASerialLdd1.o" "../Generated_Code/ASerialLdd1.c"
+Finished building: ../Generated_Code/ASerialLdd1.c
+ 
+Building file: ../Generated_Code/Cpu.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Cpu.d" -MT"Generated_Code/Cpu.o" -c -o "Generated_Code/Cpu.o" "../Generated_Code/Cpu.c"
+Finished building: ../Generated_Code/Cpu.c
+ 
+Building file: ../Generated_Code/Inhr1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Inhr1.d" -MT"Generated_Code/Inhr1.o" -c -o "Generated_Code/Inhr1.o" "../Generated_Code/Inhr1.c"
+Finished building: ../Generated_Code/Inhr1.c
+ 
+Building file: ../Generated_Code/PE_LDD.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/PE_LDD.d" -MT"Generated_Code/PE_LDD.o" -c -o "Generated_Code/PE_LDD.o" "../Generated_Code/PE_LDD.c"
+Finished building: ../Generated_Code/PE_LDD.c
+ 
+Building file: ../Generated_Code/Term1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Term1.d" -MT"Generated_Code/Term1.o" -c -o "Generated_Code/Term1.o" "../Generated_Code/Term1.c"
+Finished building: ../Generated_Code/Term1.c
+ 
+Building file: ../Generated_Code/Vectors.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Vectors.d" -MT"Generated_Code/Vectors.o" -c -o "Generated_Code/Vectors.o" "../Generated_Code/Vectors.c"
+Finished building: ../Generated_Code/Vectors.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/TU1.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:10:37 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:12:11 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:14:27 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:16:05 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:19:28 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/Events.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/Events.d" -MT"Sources/Events.o" -c -o "Sources/Events.o" "../Sources/Events.c"
+Finished building: ../Sources/Events.c
+ 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building file: ../Generated_Code/Cpu.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Cpu.d" -MT"Generated_Code/Cpu.o" -c -o "Generated_Code/Cpu.o" "../Generated_Code/Cpu.c"
+Finished building: ../Generated_Code/Cpu.c
+ 
+Building file: ../Generated_Code/FC321.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/FC321.d" -MT"Generated_Code/FC321.o" -c -o "Generated_Code/FC321.o" "../Generated_Code/FC321.c"
+Finished building: ../Generated_Code/FC321.c
+ 
+Building file: ../Generated_Code/PE_LDD.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/PE_LDD.d" -MT"Generated_Code/PE_LDD.o" -c -o "Generated_Code/PE_LDD.o" "../Generated_Code/PE_LDD.c"
+Finished building: ../Generated_Code/PE_LDD.c
+ 
+Building file: ../Generated_Code/RealTimeLdd1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/RealTimeLdd1.d" -MT"Generated_Code/RealTimeLdd1.o" -c -o "Generated_Code/RealTimeLdd1.o" "../Generated_Code/RealTimeLdd1.c"
+Finished building: ../Generated_Code/RealTimeLdd1.c
+ 
+Building file: ../Generated_Code/TU1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/TU1.d" -MT"Generated_Code/TU1.o" -c -o "Generated_Code/TU1.o" "../Generated_Code/TU1.c"
+Finished building: ../Generated_Code/TU1.c
+ 
+Building file: ../Generated_Code/Vectors.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Vectors.d" -MT"Generated_Code/Vectors.o" -c -o "Generated_Code/Vectors.o" "../Generated_Code/Vectors.c"
+Finished building: ../Generated_Code/Vectors.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/TU1.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:25:04 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/Events.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/Events.d" -MT"Sources/Events.o" -c -o "Sources/Events.o" "../Sources/Events.c"
+Finished building: ../Sources/Events.c
+ 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building file: ../Generated_Code/ASerialLdd1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/ASerialLdd1.d" -MT"Generated_Code/ASerialLdd1.o" -c -o "Generated_Code/ASerialLdd1.o" "../Generated_Code/ASerialLdd1.c"
+Finished building: ../Generated_Code/ASerialLdd1.c
+ 
+Building file: ../Generated_Code/CI2C1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/CI2C1.d" -MT"Generated_Code/CI2C1.o" -c -o "Generated_Code/CI2C1.o" "../Generated_Code/CI2C1.c"
+Finished building: ../Generated_Code/CI2C1.c
+ 
+Building file: ../Generated_Code/Cpu.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Cpu.d" -MT"Generated_Code/Cpu.o" -c -o "Generated_Code/Cpu.o" "../Generated_Code/Cpu.c"
+Finished building: ../Generated_Code/Cpu.c
+ 
+Building file: ../Generated_Code/FC321.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/FC321.d" -MT"Generated_Code/FC321.o" -c -o "Generated_Code/FC321.o" "../Generated_Code/FC321.c"
+Finished building: ../Generated_Code/FC321.c
+ 
+Building file: ../Generated_Code/FC322.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/FC322.d" -MT"Generated_Code/FC322.o" -c -o "Generated_Code/FC322.o" "../Generated_Code/FC322.c"
+Finished building: ../Generated_Code/FC322.c
+ 
+Building file: ../Generated_Code/Inhr1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Inhr1.d" -MT"Generated_Code/Inhr1.o" -c -o "Generated_Code/Inhr1.o" "../Generated_Code/Inhr1.c"
+Finished building: ../Generated_Code/Inhr1.c
+ 
+Building file: ../Generated_Code/IntI2cLdd1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/IntI2cLdd1.d" -MT"Generated_Code/IntI2cLdd1.o" -c -o "Generated_Code/IntI2cLdd1.o" "../Generated_Code/IntI2cLdd1.c"
+Finished building: ../Generated_Code/IntI2cLdd1.c
+ 
+Building file: ../Generated_Code/PE_LDD.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/PE_LDD.d" -MT"Generated_Code/PE_LDD.o" -c -o "Generated_Code/PE_LDD.o" "../Generated_Code/PE_LDD.c"
+Finished building: ../Generated_Code/PE_LDD.c
+ 
+Building file: ../Generated_Code/RealTimeLdd1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/RealTimeLdd1.d" -MT"Generated_Code/RealTimeLdd1.o" -c -o "Generated_Code/RealTimeLdd1.o" "../Generated_Code/RealTimeLdd1.c"
+Finished building: ../Generated_Code/RealTimeLdd1.c
+ 
+Building file: ../Generated_Code/RealTimeLdd2.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/RealTimeLdd2.d" -MT"Generated_Code/RealTimeLdd2.o" -c -o "Generated_Code/RealTimeLdd2.o" "../Generated_Code/RealTimeLdd2.c"
+Finished building: ../Generated_Code/RealTimeLdd2.c
+ 
+Building file: ../Generated_Code/TU1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/TU1.d" -MT"Generated_Code/TU1.o" -c -o "Generated_Code/TU1.o" "../Generated_Code/TU1.c"
+Finished building: ../Generated_Code/TU1.c
+ 
+Building file: ../Generated_Code/TU2.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/TU2.d" -MT"Generated_Code/TU2.o" -c -o "Generated_Code/TU2.o" "../Generated_Code/TU2.c"
+Finished building: ../Generated_Code/TU2.c
+ 
+Building file: ../Generated_Code/Term1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Term1.d" -MT"Generated_Code/Term1.o" -c -o "Generated_Code/Term1.o" "../Generated_Code/Term1.c"
+Finished building: ../Generated_Code/Term1.c
+ 
+Building file: ../Generated_Code/Vectors.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Vectors.d" -MT"Generated_Code/Vectors.o" -c -o "Generated_Code/Vectors.o" "../Generated_Code/Vectors.c"
+Finished building: ../Generated_Code/Vectors.c
+ 
+Building file: ../Generated_Code/WAIT1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/WAIT1.d" -MT"Generated_Code/WAIT1.o" -c -o "Generated_Code/WAIT1.o" "../Generated_Code/WAIT1.c"
+Finished building: ../Generated_Code/WAIT1.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:25:16 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:28:16 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:28:30 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:29:13 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:29:43 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:31:07 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:31:54 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:34:09 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:35:06 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:35:52 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:36:36 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:40:44 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 
+22:40:48 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+make: Nothing to be done for 'all'.
+22:41:29 **** Incremental Build of configuration Debug for project MPU6050 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: MPU6050.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
+Finished building target: MPU6050.elf
+ 

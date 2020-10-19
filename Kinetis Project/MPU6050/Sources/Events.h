@@ -42,6 +42,9 @@
 #include "RealTimeLdd1.h"
 #include "TU1.h"
 #include "WAIT1.h"
+#include "FC322.h"
+#include "RealTimeLdd2.h"
+#include "TU2.h"
 
 #ifdef __cplusplus
 extern "C" {

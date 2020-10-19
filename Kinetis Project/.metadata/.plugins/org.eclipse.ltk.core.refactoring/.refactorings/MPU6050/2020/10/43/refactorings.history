@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Create method sendBT" description="Extract Method Refactoring" fileName="file:/C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis%20Project/MPU6050/Sources/main.c" flags="4" id="org.eclipse.cdt.internal.ui.refactoring.extractfunction.ExtractFunctionRefactoring" name="sendBT" replaceDuplicates="false" selection="7247,611" stamp="1603110038004" visibility="private"/>
+</session>

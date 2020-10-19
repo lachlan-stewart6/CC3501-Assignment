@@ -7,7 +7,7 @@
 **     Version     : Component 01.188, Driver 01.12, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-08, 13:42, # CodeGen: 4
+**     Date/Time   : 2020-10-19, 22:10, # CodeGen: 18
 **     Abstract    :
 **         This component "Serial_LDD" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -17,7 +17,7 @@
 **         The component requires one on-chip asynchronous serial communication channel.
 **     Settings    :
 **          Component name                                 : ASerialLdd1
-**          Device                                         : UART0
+**          Device                                         : UART2
 **          Interrupt service/event                        : Disabled
 **          Settings                                       : 
 **            Data width                                   : 8 bits
@@ -32,10 +32,10 @@
 **            Receiver input                               : Not inverted
 **            Break generation length                      : 10/11 bits
 **            Receiver                                     : Enabled
-**              RxD                                        : TSI0_CH9/PTB16/UART0_RX/EWM_IN
+**              RxD                                        : PTD2/LLWU_P13/SPI0_SOUT/UART2_RX
 **              RxD pin signal                             : 
 **            Transmitter                                  : Enabled
-**              TxD                                        : TSI0_CH10/PTB17/UART0_TX/EWM_OUT_b
+**              TxD                                        : PTD3/SPI0_SIN/UART2_TX
 **              TxD pin signal                             : 
 **            Flow control                                 : None
 **          Initialization                                 : 
@@ -125,7 +125,7 @@ extern "C" {
 
 
 /*! Peripheral base address of a device allocated by the component. This constant can be used directly in PDD macros. */
-#define ASerialLdd1_PRPH_BASE_ADDRESS  0x4006A000U
+#define ASerialLdd1_PRPH_BASE_ADDRESS  0x4006C000U
   
 /* Methods configuration constants - generated for all enabled component's methods */
 #define ASerialLdd1_Init_METHOD_ENABLED /*!< Init method of the component ASerialLdd1 is enabled (generated) */

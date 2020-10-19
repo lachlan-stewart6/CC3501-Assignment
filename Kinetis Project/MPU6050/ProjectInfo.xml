@@ -54,11 +54,14 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\CI2C1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\Cpu.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\FC321.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\FC322.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\Inhr1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\IntI2cLdd1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\PE_LDD.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\RealTimeLdd1.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\RealTimeLdd2.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\TU1.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\TU2.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\Term1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\Vectors.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\WAIT1.c</PathName>
@@ -71,6 +74,7 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\CI2C1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\Cpu.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\FC321.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\FC322.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\IO_Map.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\Inhr1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\IntI2cLdd1.h</PathName>
@@ -79,10 +83,13 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\PE_LDD.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\PE_Types.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\RealTimeLdd1.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\RealTimeLdd2.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\TU1.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\TU2.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\Term1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Generated_Code\WAIT1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Sources\Events.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Sources\HMC5883L.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Sources\MPU6050.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Sources\preRecordedData.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\MPU6050\Static_Code\IO_Map\MK20D5.h</PathName>
