@@ -50,11 +50,15 @@
 #include <sys/time.h>
 #include <string.h>
 #include <MPU6050.h>
+#include <preRecordedData.h>
+
 /* User includes (#include below this line is not maintained by Processor Expert) */
 int16_t data[128]; // 256 bytes;
 int data_index=0;
 
-void printFIFOData(){
+extern char preRecordedData[900];
+
+void printData(){
 	Term1_SendStr("XG\tYG\tZG\tXA\tYA\tZA\r\n");
 	for(int i=0;i<data_index;i+=6){
 		Term1_SendNum(data[i]);
@@ -135,21 +139,21 @@ int main(void)
 	byte response=0;
 	byte acc[6];
 	byte gyro[6];
-	short int kinetisBuffer[512];
 	float PI = 3.141592654;
 	float AccX, AccY, AccZ;
 	float accAngleX = 0, accAngleY = 0;
 	float GyroX, GyroY, GyroZ;
 	float gyroAngleX = 0, gyroAngleY = 0, gyroAngleZ = 0;
+	float MagX = 0, MagY = 0, MagZ = 0;
 	float yaw = 0, pitch = 0, roll = 0;
+	word elapsedTime; //
 	byte enableFIFO[2] = {USER_CTRL, 1<<FIFO_EN_BIT}; // enable FIFO
 	byte enableMPU[2]={PWR_MGMT_1, 0};
 	byte disableFIFO[2] = {FIFO_EN, 0};  // send 0 to FIFO_en
-	byte count1[2]={0};
 
 
 	short int FIFO_channels = 6; // 6 short ints (12 bytes) of data being read from the FIFO buffer
-	float elapsedTime = 0.001; // 1ms for f=1kHz
+
 	uint16 start, stop, time;
 	CI2C1_SendBlock(enableMPU, 2, &sent);// Enable MPU
 
@@ -160,7 +164,7 @@ int main(void)
 	char printThing[100];
 	sprintf(printThing, "MPU Setup (expecting 104): %i\r\n", response);
 	Term1_SendStr(printThing);
-
+	/*
 	setUpFIFO();
 	CI2C1_SendBlock(enableFIFO, 2, &sent); // enable FIFO
 
@@ -174,15 +178,18 @@ int main(void)
 	Term1_SendStr("FIFO counts: ");
 	Term1_SendNum(count1);
 	Term1_SendStr("\r\n");
-	return 0;
-	// read and print FIFO buffer
-	//sprintf(printThing, "Read %i short ints from the FIFO buffer (expecting 120)\r\n", count1/2);
-	//Term1_SendStr(printThing);
-	//getFIFOData(count1/2);
 
+	// read and print FIFO buffer
+	sprintf(printThing, "Read %i short ints from the FIFO buffer (expecting 120)\r\n", count1/2);
+	Term1_SendStr(printThing);
+
+	getFIFOData(count1/2);
 	printFIFOData();
-	Term1_SendStr("Finished");
-/*
+	 *
+	 */
+	FC321_Enable();
+	Term1_Cls();
+	FC321_Reset();
 	for(;;){
 		// read accelerometer values
 		CI2C1_SendChar(ACCEL_XOUT_H);
@@ -194,7 +201,7 @@ int main(void)
 
 		// calculate pitch and roll from accelerometer
 		accAngleX = (atan(AccY / sqrt(pow(AccX, 2) + pow(AccZ, 2))) * 180/PI) - 0.58;
-		accAngleY = (atan(-1*AccX / sqrt(pow(AccY, 2) + pow(AccZ, 2))) *180/PI) +1.58;
+		accAngleY = (atan(-1*AccX / sqrt(pow(AccY, 2) + pow(AccZ, 2))) *180/PI) + 1.58;
 
 		CI2C1_SendChar(GYRO_XOUT_H);
 		CI2C1_RecvBlock(gyro,6,&recv);
@@ -203,14 +210,38 @@ int main(void)
 		GyroY = ((gyro[2]<<8 | gyro[3]) / 131.0) - 2;
 		GyroZ = ((gyro[4]<<8 | gyro[5]) / 131.0) + 0.79;
 
-		gyroAngleX = gyroAngleX + GyroX * elapsedTime; // deg/s * s = deg
-		gyroAngleY = gyroAngleY + GyroY * elapsedTime;  // elapsed time = 1ms
+		FC321_GetTimeUS(&elapsedTime);
+		gyroAngleX = gyroAngleX + (GyroX * (elapsedTime/1000000)); // deg/s * s = deg
+		gyroAngleY = gyroAngleY + (GyroY * (elapsedTime/1000000));
+		FC321_Reset();
 
-		yaw =  yaw + GyroZ * elapsedTime;
+		yaw =  yaw + GyroZ * elapsedTime/1000000;
 		roll = 0.96 * gyroAngleX + 0.04 * accAngleX;
 		pitch = 0.96 * gyroAngleY + 0.04 * accAngleY;
+		// https://en.wikipedia.org/wiki/Rotation_matrix
+		// https://www.globalsecurity.org/space/library/report/1997/basicnav.pdf
+
+		Term1_MoveTo(1,1);
+
+		Term1_SendStr("Pitch: ");
+		Term1_SendFloatNum(GyroY);
+		Term1_SendStr("\r\n");
+
+		Term1_SendStr("Roll: ");
+		Term1_SendFloatNum(GyroX);
+		Term1_SendStr("\r\n");
+
+		Term1_SendStr("Yaw: ");
+		Term1_SendFloatNum(GyroZ);
+		Term1_SendStr("\r\n");
+
+		Term1_SendStr("Time(us): ");
+		Term1_SendNum(elapsedTime);
+		Term1_SendStr("\r\n");
+		WAIT1_Waitus(10000);
+
 	}
-*/
+	Term1_SendStr("Finished");
 
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/

@@ -50,6 +50,9 @@ Module "Term1"     (component Term)
    - Term1_CRLF -Send CRLF to terminal.
    - Term1_SendStr -Send string to terminal.
    - Term1_SendNum -Send number to terminal.
+   - Term1_SendFloatNum -Send a float number to the terminal. Due to the transformations the maximum float number is limited 
+                according to the following conditions:     - positive number: 9 digits for integer part with 4 digits for 
+                fractional part.     - negative numbers: 8 digits for integer part with 4 digits for fractional part.
    - Term1_SendChar -Send char to terminal.
    - Term1_Cls -Clear the terminal window.
    - Term1_MoveTo -Move cursor to position x, y. Range of coordinates can be from 1 to the size, which depends on the used 

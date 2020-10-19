@@ -1,0 +1,29 @@
+X Direction			Y Direction
+Nothing 0-5sec			Accelerates 0-5 sec
+Accelerates 5-10 sec		decelerates 5-6 sec
+Nothing 10-13 sec		Nothing 6-7 sec
+decelerates 13-25 sec		accelerates 7-10 sec
+accelerates 25-26 sec		accelerates 10-10.6 sec
+decelerates 26-27 sec		decelerates 10.6-15sec
+nothing 27- 28 sec		nothing 15-20 sec
+accelerates 28-30 sec		accelerates 20-26 sec
+			decelerates 26-30 sec
+
+
+X Direction 				Y Direction 
+Upright 0-10				upright 0-5 
+falls 10-11				leans 5-6
+down 11-12				returns up right 6-7
+getting up 12-13			leans the other way 7-8
+upright 13-20				returns 8-9
+falls 20-22				upright 9-14
+down 22-24			 	leans 14-15
+getting up 24-25			returns up 15-16
+upright 25-30				leans the other way 16-17
+				returns 17-18
+				upright 18-23
+			 	leans 23-24
+				returns up 24-25
+				leans the other way 26-27
+				returns 27-28
+				upright 28-30

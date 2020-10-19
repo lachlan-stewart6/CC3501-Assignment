@@ -1,6 +1,6 @@
-23:38:01 **** Incremental Build of configuration Debug for project MPU6050 ****
+15:17:28 **** Incremental Build of configuration Debug for project MPU6050 ****
 make all 
 make: Nothing to be done for 'all'.
 
-23:38:01 Build Finished (took 204ms)
+15:17:28 Build Finished (took 202ms)
 

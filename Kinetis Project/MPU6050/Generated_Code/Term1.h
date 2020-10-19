@@ -7,7 +7,7 @@
 **     Version     : Component 02.061, Driver 03.22, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-07, 22:24, # CodeGen: 3
+**     Date/Time   : 2020-10-19, 14:52, # CodeGen: 16
 **     Abstract    :
 **This components generates low-level console IO routines for selected UART.
 **     Settings    :
@@ -18,14 +18,15 @@
 **            Low speed mode                               : This component disabled
 **            Slow speed mode                              : This component disabled
 **     Contents    :
-**         CRLF       - void Term1_CRLF(void);
-**         SendStr    - void Term1_SendStr(uint8_t *str);
-**         SendNum    - void Term1_SendNum(int32_t number);
-**         SendChar   - void Term1_SendChar(char_t Val);
-**         Cls        - void Term1_Cls(void);
-**         MoveTo     - void Term1_MoveTo(uint8_t x, uint8_t y);
-**         ReadChar   - void Term1_ReadChar(char_t *c);
-**         KeyPressed - bool Term1_KeyPressed(void);
+**         CRLF         - void Term1_CRLF(void);
+**         SendStr      - void Term1_SendStr(uint8_t *str);
+**         SendNum      - void Term1_SendNum(int32_t number);
+**         SendFloatNum - byte Term1_SendFloatNum(TPE_Float number);
+**         SendChar     - void Term1_SendChar(char_t Val);
+**         Cls          - void Term1_Cls(void);
+**         MoveTo       - void Term1_MoveTo(uint8_t x, uint8_t y);
+**         ReadChar     - void Term1_ReadChar(char_t *c);
+**         KeyPressed   - bool Term1_KeyPressed(void);
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -155,6 +156,29 @@ void Term1_SendNum(int32_t number);
 **         NAME            - DESCRIPTION
 **         number          - Long number
 **     Returns     : Nothing
+** ===================================================================
+*/
+
+byte Term1_SendFloatNum(TPE_Float number);
+/*
+** ===================================================================
+**     Method      :  Term1_SendFloatNum (component Term)
+**     Description :
+**         Send a float number to the terminal. Due to the
+**         transformations the maximum float number is limited
+**         according to the following conditions: 
+**         - positive number: 9 digits for integer part with 4 digits
+**         for fractional part. 
+**         - negative numbers: 8 digits for integer part with 4 digits
+**         for fractional part.
+**     Parameters  :
+**         NAME            - DESCRIPTION
+**         number          - Float variable
+**     Returns     :
+**         ---             - Error code, possible codes:
+**                           ERR_OK - OK
+**                           ERR_RANGE - Float number exceeds maximal
+**                           number limitation.
 ** ===================================================================
 */
 
