@@ -952,3 +952,12 @@ Invoking: Cross ARM C++ Linker
 arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/MPU6050/Project_Settings/Linker_Files" -Wl,-Map,"MPU6050.map" -specs=nano.specs -specs=nosys.specs -o "MPU6050.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/FC322.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Term1.o ./Generated_Code/Vectors.o ./Generated_Code/WAIT1.o   
 Finished building target: MPU6050.elf
  
+13:43:32 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+13:44:09 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
+14:32:23 **** Incremental Build of configuration Debug for project CC3501_Assignment2 ****
+make all 
+make: Nothing to be done for 'all'.
