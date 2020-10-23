@@ -24,7 +24,7 @@ by the component.
 <td class="regResetVal">0x00000004</td>
  <td>FTM0_MODE register, peripheral RealTimeLdd1.</td></tr>
 <tr><td>0x40038000</td><td>FTM0_SC</td>
-<td class="regNotResetVal">0x00000048</td>
+<td class="regNotResetVal">0x00000055</td>
  <td>FTM0_SC register, peripheral RealTimeLdd1.</td></tr>
 <tr><td>0x4003804C</td><td>FTM0_CNTIN</td>
 <td class="regResetVal">0x00000000</td>
@@ -57,7 +57,7 @@ by the component.
 <td class="regResetVal">0x00000000</td>
  <td>FTM0_C7SC register, peripheral RealTimeLdd1.</td></tr>
 <tr><td>0x40038008</td><td>FTM0_MOD</td>
-<td class="regNotResetVal">0x00000001</td>
+<td class="regNotResetVal">0x00000002</td>
  <td>FTM0_MOD register, peripheral RealTimeLdd1.</td></tr>
 <tr><td>0xE000E43E</td><td>NVICIP62</td>
 <td class="regNotResetVal">0x00000080</td>
@@ -241,14 +241,14 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40038000</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000048</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000055</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>7</td><td>TOF</td><td>0x00</td><td>Timer Overflow Flag</td>
 <tr><td>6</td><td>TOIE</td><td>0x01</td><td>Timer Overflow Interrupt Enable</td>
 <tr><td>5</td><td>CPWMS</td><td>0x00</td><td>Center-aligned PWM Select</td>
-<tr><td>3 - 4</td><td>CLKS</td><td>0x00</td><td>Clock Source Selection</td>
-<tr><td>0 - 2</td><td>PS</td><td>0x00</td><td>Prescale Factor Selection</td>
+<tr><td>3 - 4</td><td>CLKS</td><td>0x02</td><td>Clock Source Selection</td>
+<tr><td>0 - 2</td><td>PS</td><td>0x04</td><td>Prescale Factor Selection</td>
 </tr></table>
 <div class="reghdr1">FTM0_CNTIN</div>
 <div class="regdiag">
@@ -858,7 +858,7 @@ registers of the peripheral(s) configured by the component.
         
 </div>
 <table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40038008</td></tr>
-<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
 <tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
 <tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
 <tr><td>0 - 15</td><td>MOD</td><td>0x00</td><td>Modulo value</td>
@@ -939,9 +939,9 @@ registers of the peripheral(s) configured by the component.
 **          Interrupt service/event                        : Enabled
 **            Interrupt                                    : INT_FTM0
 **            Interrupt priority                           : medium priority
-**          Resolution                                     : 0.095367 µs
+**          Resolution                                     : 2.930 ms
 **          SW counter                                     : 32-bit
-**          Maximum time of event                          : 409.598146117632 sec
+**          Maximum time of event                          : 12582912 sec
 **          Initialization                                 : 
 **            Enabled in init. code                        : yes
 **            Auto initialization                          : yes

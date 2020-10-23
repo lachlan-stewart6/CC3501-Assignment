@@ -38,10 +38,10 @@
 #include "Bluetooth_Term.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
-#include "Timer.h"
+#include "GyroTimer.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
-#include "FC321.h"
+#include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
 

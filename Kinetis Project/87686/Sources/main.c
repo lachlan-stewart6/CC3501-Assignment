@@ -35,10 +35,10 @@
 #include "Bluetooth_Term.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
-#include "Timer.h"
+#include "GyroTimer.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
-#include "FC321.h"
+#include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
 /* Including shared modules, which are used for whole project */
@@ -55,32 +55,32 @@
 int16_t data[128]; // 256 bytes;
 int data_index=0;
 
-//void sendBT(float pitch, float roll, float yaw, float MagX, float MagY,
-//			float MagZ, word elapsedTime) {
-//		Bluetooth_Term_MoveTo(1,1);
-//		Bluetooth_Term_SendStr("Pitch: ");
-//		Bluetooth_Term_SendFloatNum(pitch);
-//		Bluetooth_Term_SendStr("\r\n");
-//		Bluetooth_Term_SendStr("Roll: ");
-//		Bluetooth_Term_SendFloatNum(roll);
-//		Bluetooth_Term_SendStr("\r\n");
-//		Bluetooth_Term_SendStr("Yaw: ");
-//		Bluetooth_Term_SendFloatNum(yaw);
-//		Bluetooth_Term_SendStr("\r\n");
-//		Bluetooth_Term_SendStr("MagX: ");
-//		Bluetooth_Term_SendFloatNum(MagX);
-//		Bluetooth_Term_SendStr("\r\n");
-//		Bluetooth_Term_SendStr("MagY: ");
-//		Bluetooth_Term_SendFloatNum(MagY);
-//		Bluetooth_Term_SendStr("\r\n");
-//		Bluetooth_Term_SendStr("MagZ: ");
-//		Bluetooth_Term_SendFloatNum(MagZ);
-//		Bluetooth_Term_SendStr("\r\n");
-//		Bluetooth_Term_SendStr("Time(us): ");
-//		Bluetooth_Term_SendNum(elapsedTime);
-//		Bluetooth_Term_SendStr("\r\n");
-//		//Bluetooth_Term_Cls();
-//	}
+void sendBT(float pitch, float roll, float yaw, float MagX, float MagY,
+			float MagZ, word elapsedTime) {
+		Bluetooth_Term_MoveTo(1,1);
+		Bluetooth_Term_SendStr("Pitch: ");
+		Bluetooth_Term_SendFloatNum(pitch);
+		Bluetooth_Term_SendStr("\r\n");
+		Bluetooth_Term_SendStr("Roll: ");
+		Bluetooth_Term_SendFloatNum(roll);
+		Bluetooth_Term_SendStr("\r\n");
+		Bluetooth_Term_SendStr("Yaw: ");
+		Bluetooth_Term_SendFloatNum(yaw);
+		Bluetooth_Term_SendStr("\r\n");
+		Bluetooth_Term_SendStr("MagX: ");
+		Bluetooth_Term_SendFloatNum(MagX);
+		Bluetooth_Term_SendStr("\r\n");
+		Bluetooth_Term_SendStr("MagY: ");
+		Bluetooth_Term_SendFloatNum(MagY);
+		Bluetooth_Term_SendStr("\r\n");
+		Bluetooth_Term_SendStr("MagZ: ");
+		Bluetooth_Term_SendFloatNum(MagZ);
+		Bluetooth_Term_SendStr("\r\n");
+		Bluetooth_Term_SendStr("Time(us): ");
+		Bluetooth_Term_SendNum(elapsedTime);
+		Bluetooth_Term_SendStr("\r\n");
+		//Bluetooth_Term_Cls();
+	}
 
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
@@ -103,6 +103,7 @@ int main(void)
 	char ICM_addr = 0x69;
 	byte acc[6];
 	byte gyro[6];
+	byte mag[6];
 	byte PWR_MGMT_1 = {0x06};
 	byte ICM_WHO_AM_I = {0x00};
 	word sent, recv;
@@ -121,9 +122,9 @@ int main(void)
 		CI2C1_SendChar(0x2D);
 		CI2C1_RecvBlock(acc,6,&recv);
 
-		AccX = (acc[0]<<8 | acc[1]) / 16384.0;  // sensitivity values on datasheet
-		AccY = (acc[2]<<8 | acc[3]) / 16384.0;
-		AccZ = (acc[4]<<8 | acc[5]) / 16384.0;
+		AccX = (acc[0]<<8 | acc[1]);  // sensitivity values on datasheet
+		AccY = (acc[2]<<8 | acc[3]);
+		AccZ = (acc[4]<<8 | acc[5]);
 
 		// calculate pitch and roll from accelerometer
 		accAngleX = (atan(AccY / sqrt(pow(AccX, 2) + pow(AccZ, 2))) * 180/PI) - 0.58;
@@ -132,16 +133,31 @@ int main(void)
 		CI2C1_SendChar(0x33);
 		CI2C1_RecvBlock(gyro,6,&recv);
 
-		GyroX = ((gyro[0]<<8 | gyro[1]) / 131.0) + 0.56;  // sensitivity values on datasheet
-		GyroY = ((gyro[2]<<8 | gyro[3]) / 131.0) - 2;
-		GyroZ = ((gyro[4]<<8 | gyro[5]) / 131.0) + 0.79;
+		GyroX = (gyro[0]<<8 | gyro[1]);  // sensitivity values on datasheet
+		GyroY = (gyro[2]<<8 | gyro[3]);
+		GyroZ = (gyro[4]<<8 | gyro[5]);
 
+		BluetoothTimer_GetTimeUS(&elapsedTime);
+		gyroAngleX = gyroAngleX + (GyroX * (elapsedTime/1000000)); // deg/s * s = deg
+		gyroAngleY = gyroAngleY + (GyroY * (elapsedTime/1000000));
+		BluetoothTimer_Reset();
 
-		Timer_GetTimeMS(&bluetoothTime);
-//		if (bluetoothTime >= 1000){
-//			sendBT(pitch, roll, yaw, MagX, MagY, MagZ, elapsedTime);
-//			Timer_Reset();
-//		}
+		yaw =  yaw + GyroZ * elapsedTime/1000000;
+		roll = 0.96 * gyroAngleX + 0.04 * accAngleX;
+		pitch = 0.96 * gyroAngleY + 0.04 * accAngleY;
+
+		CI2C1_SendChar(0x11);
+		CI2C1_RecvBlock(mag,6,&recv);
+
+		MagX = (acc[0]<<8 | acc[1]);  // sensitivity values on datasheet
+		MagZ = (acc[2]<<8 | acc[3]);
+		MagY = (acc[4]<<8 | acc[5]);
+
+		GyroTimer_GetTimeMS(&bluetoothTime);
+		if (bluetoothTime >= 1000){
+			sendBT(pitch, roll, yaw, MagX, MagY, MagZ, elapsedTime);
+			GyroTimer_Reset();
+		}
 
 	}
 

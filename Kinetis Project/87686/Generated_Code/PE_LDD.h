@@ -6,7 +6,7 @@
 **     Version     : Component 01.000, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 14:36, # CodeGen: 13
+**     Date/Time   : 2020-10-23, 21:21, # CodeGen: 21
 **     Abstract    :
 **
 **     Settings    :
@@ -66,10 +66,10 @@
 #include "Bluetooth_Term.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
-#include "Timer.h"
+#include "GyroTimer.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
-#include "FC321.h"
+#include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
 

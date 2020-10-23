@@ -51,9 +51,9 @@
       <GenExtraFileSrcDir13>lib\Kinetis\startup\</GenExtraFileSrcDir13>
       <GenExtraFileSrcDir9>Repositories\lib\doxygen\</GenExtraFileSrcDir9>
       <XtraAge10>1364685965</XtraAge10>
-      <XtraAge11>1364685965</XtraAge11>
+      <XtraAge11>1364699812</XtraAge11>
       <XtraAge13>1364619441</XtraAge13>
-      <XtraAge14>1364686120</XtraAge14>
+      <XtraAge14>1364699812</XtraAge14>
       <GenExtraFileType14>4</GenExtraFileType14>
       <GenExtraFileType13>5</GenExtraFileType13>
       <GenExtraFileType12>4</GenExtraFileType12>
@@ -376,10 +376,11 @@
       <GenAllModules lines_count="17">
         <Line>ASerialLdd1</Line>
         <Line>Bluetooth_Term</Line>
+        <Line>BluetoothTimer</Line>
         <Line>CI2C1</Line>
         <Line>Cpu</Line>
         <Line>Events</Line>
-        <Line>FC321</Line>
+        <Line>GyroTimer</Line>
         <Line>Inhr1</Line>
         <Line>IntI2cLdd1</Line>
         <Line>IO_Map</Line>
@@ -388,7 +389,6 @@
         <Line>PE_Types</Line>
         <Line>RealTimeLdd1</Line>
         <Line>RealTimeLdd2</Line>
-        <Line>Timer</Line>
         <Line>TU1</Line>
         <Line>TU2</Line>
       </GenAllModules>
@@ -399,17 +399,17 @@
         <Line>Bluetooth_Term</Line>
         <Line>Inhr1</Line>
         <Line>ASerialLdd1</Line>
-        <Line>Timer</Line>
+        <Line>GyroTimer</Line>
         <Line>RealTimeLdd1</Line>
         <Line>TU1</Line>
-        <Line>FC321</Line>
+        <Line>BluetoothTimer</Line>
         <Line>RealTimeLdd2</Line>
         <Line>TU2</Line>
       </GenBeanModules>
     </GenFiles>
     <SignalListFile>Documentation\87686_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>GNUC</DestinationCompiler>
-    <ProjectModificationStamp>18</ProjectModificationStamp>
+    <ProjectModificationStamp>21</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>false</Generated>
@@ -487,7 +487,7 @@
     <GenDriverVersion>01.04</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
     <HeaderAge>1364686120</HeaderAge>
-    <CodeAge>1364686120</CodeAge>
+    <CodeAge>1364699812</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>14</GenNumMethods>
     <SetClockConfiguration>false</SetClockConfiguration>
@@ -1552,12 +1552,12 @@
   </ComponentID_7>
   <ComponentID_10>
     <Generated>true</Generated>
-    <GenCompName>Timer</GenCompName>
+    <GenCompName>GyroTimer</GenCompName>
     <GenComponentVersion>02.070</GenComponentVersion>
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1364685965</HeaderAge>
-    <CodeAge>1364685965</CodeAge>
+    <HeaderAge>1364699812</HeaderAge>
+    <CodeAge>1364699812</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>10</GenNumMethods>
     <Enable>false</Enable>
@@ -1572,10 +1572,10 @@
     <GetTimeReal>false</GetTimeReal>
     <GenNumEvents>2</GenNumEvents>
     <BeforeNewSpeed_Selected>0</BeforeNewSpeed_Selected>
-    <BeforeNewSpeed_Name>Timer_BeforeNewSpeed</BeforeNewSpeed_Name>
+    <BeforeNewSpeed_Name>GyroTimer_BeforeNewSpeed</BeforeNewSpeed_Name>
     <BeforeNewSpeed_Priority>interrupts disabled</BeforeNewSpeed_Priority>
     <AfterNewSpeed_Selected>0</AfterNewSpeed_Selected>
-    <AfterNewSpeed_Name>Timer_AfterNewSpeed</AfterNewSpeed_Name>
+    <AfterNewSpeed_Name>GyroTimer_AfterNewSpeed</AfterNewSpeed_Name>
     <AfterNewSpeed_Priority>interrupts disabled</AfterNewSpeed_Priority>
     <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
     <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
@@ -1630,8 +1630,8 @@
       <GenComponentVersion>01.007</GenComponentVersion>
       <GenDriverVersion>01.01</GenDriverVersion>
       <GenEventModule />
-      <HeaderAge>1364685965</HeaderAge>
-      <CodeAge>1364685965</CodeAge>
+      <HeaderAge>1364698938</HeaderAge>
+      <CodeAge>1364698938</CodeAge>
       <AsemblAge>-1</AsemblAge>
       <GenNumMethods>11</GenNumMethods>
       <Init>true</Init>
@@ -1730,8 +1730,8 @@
     <GenComponentVersion>01.164</GenComponentVersion>
     <GenDriverVersion>01.11</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1364685966</HeaderAge>
-    <CodeAge>1364685966</CodeAge>
+    <HeaderAge>1364698938</HeaderAge>
+    <CodeAge>1364698938</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>22</GenNumMethods>
     <Init>true</Init>
@@ -1837,12 +1837,12 @@
   </ComponentID_12>
   <ComponentID_14>
     <Generated>true</Generated>
-    <GenCompName>FC321</GenCompName>
+    <GenCompName>BluetoothTimer</GenCompName>
     <GenComponentVersion>02.070</GenComponentVersion>
     <GenDriverVersion>01.00</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1364685965</HeaderAge>
-    <CodeAge>1364685965</CodeAge>
+    <HeaderAge>1364699812</HeaderAge>
+    <CodeAge>1364699812</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>10</GenNumMethods>
     <Enable>false</Enable>
@@ -1857,10 +1857,10 @@
     <GetTimeReal>false</GetTimeReal>
     <GenNumEvents>2</GenNumEvents>
     <BeforeNewSpeed_Selected>0</BeforeNewSpeed_Selected>
-    <BeforeNewSpeed_Name>FC321_BeforeNewSpeed</BeforeNewSpeed_Name>
+    <BeforeNewSpeed_Name>BluetoothTimer_BeforeNewSpeed</BeforeNewSpeed_Name>
     <BeforeNewSpeed_Priority>interrupts disabled</BeforeNewSpeed_Priority>
     <AfterNewSpeed_Selected>0</AfterNewSpeed_Selected>
-    <AfterNewSpeed_Name>FC321_AfterNewSpeed</AfterNewSpeed_Name>
+    <AfterNewSpeed_Name>BluetoothTimer_AfterNewSpeed</AfterNewSpeed_Name>
     <AfterNewSpeed_Priority>interrupts disabled</AfterNewSpeed_Priority>
     <GenSmartUserChangesDetected_Header>false</GenSmartUserChangesDetected_Header>
     <GenSmartUserChangesDetected_Code>false</GenSmartUserChangesDetected_Code>
@@ -1915,8 +1915,8 @@
       <GenComponentVersion>01.007</GenComponentVersion>
       <GenDriverVersion>01.01</GenDriverVersion>
       <GenEventModule />
-      <HeaderAge>1364685965</HeaderAge>
-      <CodeAge>1364685965</CodeAge>
+      <HeaderAge>1364698979</HeaderAge>
+      <CodeAge>1364698979</CodeAge>
       <AsemblAge>-1</AsemblAge>
       <GenNumMethods>11</GenNumMethods>
       <Init>true</Init>
@@ -2015,8 +2015,8 @@
     <GenComponentVersion>01.164</GenComponentVersion>
     <GenDriverVersion>01.11</GenDriverVersion>
     <GenEventModule>Events</GenEventModule>
-    <HeaderAge>1364685965</HeaderAge>
-    <CodeAge>1364685965</CodeAge>
+    <HeaderAge>1364698979</HeaderAge>
+    <CodeAge>1364698979</CodeAge>
     <AsemblAge>-1</AsemblAge>
     <GenNumMethods>22</GenNumMethods>
     <Init>true</Init>

@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 14:36, # CodeGen: 13
+**     Date/Time   : 2020-10-23, 20:59, # CodeGen: 20
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -19,10 +19,10 @@
 **          Counter width                                  : 16 bits
 **          Value type                                     : uint16_t
 **          Input clock source                             : Internal
-**            Counter frequency                            : Auto select
+**            Counter frequency                            : 1 kHz
 **          Counter restart                                : On-match
 **            Period device                                : FTM1_MOD
-**            Period                                       : 0.095367 µs
+**            Period                                       : 2.930 ms
 **            Interrupt                                    : Enabled
 **              Interrupt                                  : INT_FTM1
 **              Interrupt priority                         : medium priority
@@ -183,15 +183,15 @@ LDD_TDeviceData* TU2_Init(LDD_TUserData *UserDataPtr)
   FTM1_C0SC = 0x00U;                   /* Clear channel status and control register */
   /* FTM1_C1SC: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,CHF=0,CHIE=0,MSB=0,MSA=0,ELSB=0,ELSA=0,??=0,DMA=0 */
   FTM1_C1SC = 0x00U;                   /* Clear channel status and control register */
-  /* FTM1_MOD: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,MOD=1 */
-  FTM1_MOD = FTM_MOD_MOD(0x01);        /* Set up modulo register */
+  /* FTM1_MOD: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,MOD=2 */
+  FTM1_MOD = FTM_MOD_MOD(0x02);        /* Set up modulo register */
   DeviceDataPrv->EnEvents = 0x0100U;   /* Enable selected events */
   /* NVICIP63: PRI63=0x80 */
   NVICIP63 = NVIC_IP_PRI63(0x80);
   /* NVICISER1: SETENA|=0x80000000 */
   NVICISER1 |= NVIC_ISER_SETENA(0x80000000);
-  /* FTM1_SC: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,TOF=0,TOIE=1,CPWMS=0,CLKS=1,PS=0 */
-  FTM1_SC = (FTM_SC_TOIE_MASK | FTM_SC_CLKS(0x01) | FTM_SC_PS(0x00)); /* Set up status and control register */
+  /* FTM1_SC: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,TOF=0,TOIE=1,CPWMS=0,CLKS=2,PS=5 */
+  FTM1_SC = (FTM_SC_TOIE_MASK | FTM_SC_CLKS(0x02) | FTM_SC_PS(0x05)); /* Set up status and control register */
   /* Registration of the device structure */
   PE_LDD_RegisterDeviceStructure(PE_LDD_COMPONENT_TU2_ID,DeviceDataPrv);
   return ((LDD_TDeviceData *)DeviceDataPrv); /* Return pointer to the device data structure */

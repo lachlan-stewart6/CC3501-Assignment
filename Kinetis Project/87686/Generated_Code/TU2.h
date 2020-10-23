@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 14:36, # CodeGen: 13
+**     Date/Time   : 2020-10-23, 20:59, # CodeGen: 20
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -19,10 +19,10 @@
 **          Counter width                                  : 16 bits
 **          Value type                                     : uint16_t
 **          Input clock source                             : Internal
-**            Counter frequency                            : Auto select
+**            Counter frequency                            : 1 kHz
 **          Counter restart                                : On-match
 **            Period device                                : FTM1_MOD
-**            Period                                       : 0.095367 µs
+**            Period                                       : 2.930 ms
 **            Interrupt                                    : Enabled
 **              Interrupt                                  : INT_FTM1
 **              Interrupt priority                         : medium priority
@@ -120,10 +120,10 @@ extern "C" {
 #define __BWUserType_TU2_TValueType
   typedef uint16_t TU2_TValueType ;    /* Type for data parameters of methods */
 #endif
-#define TU2_CNT_INP_FREQ_U_0 0x01400000UL /* Counter input frequency in Hz */
-#define TU2_CNT_INP_FREQ_R_0 20971395.017196544F /* Counter input frequency in Hz */
+#define TU2_CNT_INP_FREQ_U_0 0x0400UL  /* Counter input frequency in Hz */
+#define TU2_CNT_INP_FREQ_R_0 1024.0F   /* Counter input frequency in Hz */
 #define TU2_CNT_INP_FREQ_COUNT 0U      /* Count of predefined counter input frequencies */
-#define TU2_PERIOD_TICKS   0x02UL      /* Initialization value of period in 'counter ticks' */
+#define TU2_PERIOD_TICKS   0x03UL      /* Initialization value of period in 'counter ticks' */
 #define TU2_NUMBER_OF_CHANNELS 0x00U   /* Count of predefined channels */
 #define TU2_COUNTER_WIDTH  0x10U       /* Counter width in bits  */
 #define TU2_COUNTER_DIR    DIR_UP      /* Direction of counting */

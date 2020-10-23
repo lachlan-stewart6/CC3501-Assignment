@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K20P144M72SF1RM Rev. 0, Nov 2011
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 14:41, # CodeGen: 15
+**     Date/Time   : 2020-10-23, 21:21, # CodeGen: 21
 **     Abstract    :
 **
 **     Settings    :
@@ -309,10 +309,10 @@
 #include "Bluetooth_Term.h"
 #include "Inhr1.h"
 #include "ASerialLdd1.h"
-#include "Timer.h"
+#include "GyroTimer.h"
 #include "RealTimeLdd1.h"
 #include "TU1.h"
-#include "FC321.h"
+#include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
 #include "PE_Types.h"

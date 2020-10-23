@@ -51,10 +51,11 @@
   <FILES>
     <GeneratedCs>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\ASerialLdd1.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\BluetoothTimer.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Bluetooth_Term.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\CI2C1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Cpu.c</PathName>
-      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\FC321.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\GyroTimer.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Inhr1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\IntI2cLdd1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\PE_LDD.c</PathName>
@@ -62,7 +63,6 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\RealTimeLdd2.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU2.c</PathName>
-      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Timer.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Vectors.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Project_Settings\Startup_Code\startup.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\Events.c</PathName>
@@ -70,10 +70,11 @@
     </GeneratedCs>
     <GeneratedHs>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\ASerialLdd1.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\BluetoothTimer.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Bluetooth_Term.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\CI2C1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Cpu.h</PathName>
-      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\FC321.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\GyroTimer.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\IO_Map.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Inhr1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\IntI2cLdd1.h</PathName>
@@ -85,7 +86,6 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\RealTimeLdd2.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU2.h</PathName>
-      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Timer.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\Events.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\IO_Map\MK20D7.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\PDD\ADC_PDD.h</PathName>

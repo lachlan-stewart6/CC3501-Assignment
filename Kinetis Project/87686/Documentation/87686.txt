@@ -60,11 +60,11 @@ Module "Bluetooth_Term" (component Term)
    - Bluetooth_Term_ReadChar -Read char from terminal.
    - Bluetooth_Term_KeyPressed -Test if char was received from the terminal.
 
-Module "Timer"     (component FreeCntr32)
-   - Timer_Reset -This method clears the counter.
-   - Timer_GetTimeUS -This method returns the time (as a 16-bit unsigned integer) in microseconds since the last resetting 
+Module "GyroTimer" (component FreeCntr32)
+   - GyroTimer_Reset -This method clears the counter.
+   - GyroTimer_GetTimeUS -This method returns the time (as a 16-bit unsigned integer) in microseconds since the last resetting 
                 after the last reset.
-   - Timer_GetTimeMS -This method returns the time (as a 16-bit unsigned integer) in milliseconds since the last resetting 
+   - GyroTimer_GetTimeMS -This method returns the time (as a 16-bit unsigned integer) in milliseconds since the last resetting 
                 after the last reset.
 
 Module "TU1"       (component TimerUnit_LDD)
@@ -77,12 +77,12 @@ Module "TU1"       (component TimerUnit_LDD)
                 counter is updated to the reload value.   The method is not available if HW doesn't allow resetting of the 
                 counter.
 
-Module "FC321"     (component FreeCntr32)
-   - FC321_Reset -This method clears the counter.
-   - FC321_GetTimeUS -This method returns the time (as a 16-bit unsigned integer) in microseconds since the last resetting 
-                after the last reset.
-   - FC321_GetTimeMS -This method returns the time (as a 16-bit unsigned integer) in milliseconds since the last resetting 
-                after the last reset.
+Module "BluetoothTimer" (component FreeCntr32)
+   - BluetoothTimer_Reset -This method clears the counter.
+   - BluetoothTimer_GetTimeUS -This method returns the time (as a 16-bit unsigned integer) in microseconds since the last 
+                resetting after the last reset.
+   - BluetoothTimer_GetTimeMS -This method returns the time (as a 16-bit unsigned integer) in milliseconds since the last 
+                resetting after the last reset.
 
 Module "TU2"       (component TimerUnit_LDD)
    - TU2_Init -Initializes the device. Allocates memory for the device data structure, allocates interrupt vectors and sets 
