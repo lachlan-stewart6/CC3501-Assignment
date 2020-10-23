@@ -1,0 +1,110 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_CompilerCpp_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="4">
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535345" FileType="1048576" />
+      <File Name="Static_Code/PDD/CRC_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535184" FileType="1048576" />
+      <File Name="Static_Code/PDD/FMC_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535217" FileType="1048576" />
+      <File Name="Documentation/ICM_3501_Assignment2020_SIGNALS.txt" FileDate="2020-10-23, 14:33:32" FileAge="1603427612756" FileType="3072" />
+      <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535251" FileType="1048576" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2020-10-23, 12:29:15" FileAge="1603420155267" FileType="45637" CompNumb="4" />
+      <File Name="Documentation/ICM_3501_Assignment2020.txt" FileDate="2020-10-23, 14:26:37" FileAge="1603427197656" FileType="3072" />
+      <File Name="Static_Code/PDD/OSC_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535272" FileType="1048576" />
+      <File Name="Static_Code/PDD/WDOG_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535358" FileType="1048576" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2020-10-23, 12:29:15" FileAge="1603420155400" FileType="45637" />
+      <File Name="Static_Code/PDD/CAN_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535165" FileType="1048576" />
+      <File Name="Documentation/doxygen/ICM_3501_Assignment2020_project.txt" FileDate="2020-10-23, 14:26:36" FileAge="1603427196277" FileType="45637" CompNumb="4" />
+      <File Name="Documentation/doxygen/RealTimeLdd2_component.txt" FileDate="2020-10-23, 14:33:32" FileAge="1603427612665" FileType="45637" CompNumb="15" />
+      <File Name="Documentation/doxygen/TU1_component.txt" FileDate="2020-10-23, 14:33:32" FileAge="1603427612627" FileType="45637" CompNumb="12" />
+      <File Name="Documentation/doxygen/RoutingReport_component.txt" FileDate="2020-10-22, 14:05:35" FileAge="1603339535397" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535172" FileType="1048576" />
+      <File Name="Static_Code/IO_Map/MK20D7.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535147" FileType="1048576" />
+      <File Name="Project_Settings/Startup_Code/startup.c" FileDate="2020-10-22, 14:05:34" FileAge="1603339534960" FileType="16384" CompNumb="4" />
+      <File Name="ProjectInfo.xml" FileDate="2020-10-23, 14:26:37" FileAge="1603427197644" FileType="45637" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2020-10-23, 12:29:15" FileAge="1603420155182" FileType="8" CompNumb="4" />
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2020-10-23, 14:26:36" FileAge="1603427196290" FileType="45637" CompNumb="4" />
+      <File Name="Sources/Events.h" FileDate="2020-10-23, 14:26:36" FileAge="1603427196309" FileType="131328" />
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2020-10-23, 14:26:36" FileAge="1603427196285" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/SAI_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535305" FileType="1048576" />
+      <File Name="Static_Code/PDD/DMA_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535204" FileType="1048576" />
+      <File Name="Sources/Events.c" FileDate="2020-10-23, 10:26:48" FileAge="1603412808322" FileType="131328" />
+      <File Name="Documentation/doxygen/ASerialLdd1_component.txt" FileDate="2020-10-23, 14:33:32" FileAge="1603427612583" FileType="45637" CompNumb="9" />
+      <File Name="Static_Code/PDD/SPI_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535320" FileType="1048576" />
+      <File Name="Static_Code/PDD/EWM_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535210" FileType="1048576" />
+      <File Name="Static_Code/PDD/SIM_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535313" FileType="1048576" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2020-10-22, 14:05:35" FileAge="1603339535037" FileType="16384" CompNumb="4" />
+      <File Name="Static_Code/PDD/ADC_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535158" FileType="1048576" />
+      <File Name="Generated_Code/ASerialLdd1.h" FileDate="2020-10-23, 14:33:32" FileAge="1603427612555" FileType="45637" CompNumb="9" />
+      <File Name="Static_Code/PDD/FTFL_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535224" FileType="1048576" />
+      <File Name="Static_Code/PDD/DAC_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535192" FileType="1048576" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2020-10-23, 12:29:15" FileAge="1603420155325" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/FTM_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535231" FileType="1048576" />
+      <File Name="Static_Code/PDD/PDD_Types.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535155" FileType="1048576" />
+      <File Name="Generated_Code/ASerialLdd1.c" FileDate="2020-10-23, 14:33:32" FileAge="1603427612566" FileType="45637" CompNumb="9" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2020-10-23, 14:26:36" FileAge="1603427196266" FileType="45637" CompNumb="4" />
+      <File Name="Generated_Code/TU2.h" FileDate="2020-10-23, 14:26:36" FileAge="1603427196195" FileType="45637" CompNumb="16" />
+      <File Name="Generated_Code/TU2.c" FileDate="2020-10-23, 14:26:36" FileAge="1603427196189" FileType="45637" CompNumb="16" />
+      <File Name="Static_Code/PDD/SysTick_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535326" FileType="1048576" />
+      <File Name="Generated_Code/TU1.h" FileDate="2020-10-23, 14:18:54" FileAge="1603426734222" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/Bluetooth_Term.h" FileDate="2020-10-23, 14:19:47" FileAge="1603426787523" FileType="45637" CompNumb="7" />
+      <File Name="Generated_Code/TU1.c" FileDate="2020-10-23, 14:18:54" FileAge="1603426734214" FileType="45637" CompNumb="12" />
+      <File Name="Generated_Code/Bluetooth_Term.c" FileDate="2020-10-23, 14:19:47" FileAge="1603426787534" FileType="45637" CompNumb="7" />
+      <File Name="Documentation/doxygen/RealTimeLdd1_component.txt" FileDate="2020-10-23, 14:33:32" FileAge="1603427612640" FileType="45637" CompNumb="11" />
+      <File Name="Static_Code/PDD/VREF_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535352" FileType="1048576" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2020-10-23, 14:26:36" FileAge="1603427196242" FileType="45637" />
+      <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535292" FileType="1048576" />
+      <File Name="Static_Code/PDD/CMT_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535177" FileType="1048576" />
+      <File Name="Generated_Code/Timer.h" FileDate="2020-10-23, 14:18:54" FileAge="1603426734182" FileType="45637" CompNumb="10" />
+      <File Name="Documentation/doxygen/TU2_component.txt" FileDate="2020-10-23, 14:33:32" FileAge="1603427612653" FileType="45637" CompNumb="16" />
+      <File Name="Static_Code/PDD/PDB_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535279" FileType="1048576" />
+      <File Name="Generated_Code/Timer.c" FileDate="2020-10-23, 14:18:54" FileAge="1603426734179" FileType="45637" CompNumb="10" />
+      <File Name="Generated_Code/RealTimeLdd2.h" FileDate="2020-10-23, 14:26:36" FileAge="1603427196175" FileType="45637" CompNumb="15" />
+      <File Name="Sources/main.c" FileDate="2020-10-23, 14:32:58" FileAge="1603427578783" FileType="128" />
+      <File Name="Generated_Code/RealTimeLdd2.c" FileDate="2020-10-23, 14:26:36" FileAge="1603427196167" FileType="45637" CompNumb="15" />
+      <File Name="Documentation/doxygen/IntI2cLdd1_component.txt" FileDate="2020-10-23, 10:26:48" FileAge="1603412808241" FileType="45637" CompNumb="6" />
+      <File Name="Generated_Code/RealTimeLdd1.h" FileDate="2020-10-23, 14:18:54" FileAge="1603426734199" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2020-10-23, 12:29:15" FileAge="1603420155353" FileType="45637" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535333" FileType="1048576" />
+      <File Name="Generated_Code/RealTimeLdd1.c" FileDate="2020-10-23, 14:18:54" FileAge="1603426734192" FileType="45637" CompNumb="11" />
+      <File Name="Generated_Code/Inhr1.h" FileDate="2020-10-23, 14:33:32" FileAge="1603427612598" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2020-10-23, 12:29:15" FileAge="1603420155376" FileType="45637" />
+      <File Name="Generated_Code/CI2C1.h" FileDate="2020-10-23, 12:29:15" FileAge="1603420155491" FileType="45637" CompNumb="5" />
+      <File Name="Generated_Code/IntI2cLdd1.h" FileDate="2020-10-23, 12:29:15" FileAge="1603420155659" FileType="45637" CompNumb="6" />
+      <File Name="Generated_Code/Inhr1.c" FileDate="2020-10-23, 14:33:32" FileAge="1603427612610" FileType="45637" CompNumb="8" />
+      <File Name="Generated_Code/CI2C1.c" FileDate="2020-10-23, 12:29:15" FileAge="1603420155463" FileType="45637" CompNumb="5" />
+      <File Name="Generated_Code/IntI2cLdd1.c" FileDate="2020-10-23, 12:29:15" FileAge="1603420155525" FileType="45637" CompNumb="6" />
+      <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535285" FileType="1048576" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2020-10-23, 14:33:32" FileAge="1603427612707" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/USBDCD_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535339" FileType="1048576" />
+      <File Name="Static_Code/PDD/MCM_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535266" FileType="1048576" />
+      <File Name="Generated_Code/FC321.h" FileDate="2020-10-23, 14:26:36" FileAge="1603427196154" FileType="45637" CompNumb="14" />
+      <File Name="Static_Code/PDD/DMAMUX_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535197" FileType="1048576" />
+      <File Name="Generated_Code/FC321.c" FileDate="2020-10-23, 14:26:36" FileAge="1603427196151" FileType="45637" CompNumb="14" />
+      <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535244" FileType="1048576" />
+      <File Name="Documentation/ICM_3501_Assignment2020_Settings.xml" FileDate="2020-10-23, 14:33:33" FileAge="1603427613090" FileType="3072" />
+      <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535298" FileType="1048576" />
+      <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535238" FileType="1048576" />
+      <File Name="Static_Code/PDD/MCG_PDD.h" FileDate="2020-10-22, 14:05:35" FileAge="1603339535258" FileType="1048576" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>7</CodeGenReference>
+</CodeGenerationInfo>

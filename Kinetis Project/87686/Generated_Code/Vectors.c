@@ -6,7 +6,7 @@
 **     Version     : Component 01.000, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-22, 23:51, # CodeGen: 7
+**     Date/Time   : 2020-10-23, 14:41, # CodeGen: 15
 **     Abstract    :
 **
 **     Settings    :
@@ -57,6 +57,15 @@
   #include "Cpu.h"
   #include "CI2C1.h"
   #include "IntI2cLdd1.h"
+  #include "Bluetooth_Term.h"
+  #include "Inhr1.h"
+  #include "ASerialLdd1.h"
+  #include "Timer.h"
+  #include "RealTimeLdd1.h"
+  #include "TU1.h"
+  #include "FC321.h"
+  #include "RealTimeLdd2.h"
+  #include "TU2.h"
   #include "Events.h"
 
 
@@ -116,7 +125,7 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x25  0x00000094   -   ivINT_LLW                      unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x26  0x00000098   -   ivINT_Watchdog                 unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x27  0x0000009C   -   ivINT_Reserved39               unused by PE */
-    (tIsrFunc)&IntI2cLdd1_Interrupt,   /* 0x28  0x000000A0   8   ivINT_I2C0                     used by PE */
+    (tIsrFunc)&Cpu_Interrupt,          /* 0x28  0x000000A0   -   ivINT_I2C0                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x29  0x000000A4   -   ivINT_I2C1                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2A  0x000000A8   -   ivINT_SPI0                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x2B  0x000000AC   -   ivINT_SPI1                     unused by PE */
@@ -139,8 +148,8 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x3C  0x000000F0   -   ivINT_UART0_LON                unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x3D  0x000000F4   -   ivINT_UART0_RX_TX              unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x3E  0x000000F8   -   ivINT_UART0_ERR                unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x3F  0x000000FC   -   ivINT_UART1_RX_TX              unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x40  0x00000100   -   ivINT_UART1_ERR                unused by PE */
+    (tIsrFunc)&ASerialLdd1_Interrupt,  /* 0x3F  0x000000FC   8   ivINT_UART1_RX_TX              used by PE */
+    (tIsrFunc)&ASerialLdd1_Interrupt,  /* 0x40  0x00000100   8   ivINT_UART1_ERR                used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x41  0x00000104   -   ivINT_UART2_RX_TX              unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x42  0x00000108   -   ivINT_UART2_ERR                unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x43  0x0000010C   -   ivINT_UART3_RX_TX              unused by PE */
@@ -154,8 +163,8 @@
     (tIsrFunc)&Cpu_Interrupt,          /* 0x4B  0x0000012C   -   ivINT_CMP0                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x4C  0x00000130   -   ivINT_CMP1                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x4D  0x00000134   -   ivINT_CMP2                     unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x4E  0x00000138   -   ivINT_FTM0                     unused by PE */
-    (tIsrFunc)&Cpu_Interrupt,          /* 0x4F  0x0000013C   -   ivINT_FTM1                     unused by PE */
+    (tIsrFunc)&TU1_Interrupt,          /* 0x4E  0x00000138   8   ivINT_FTM0                     used by PE */
+    (tIsrFunc)&TU2_Interrupt,          /* 0x4F  0x0000013C   8   ivINT_FTM1                     used by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x50  0x00000140   -   ivINT_FTM2                     unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x51  0x00000144   -   ivINT_CMT                      unused by PE */
     (tIsrFunc)&Cpu_Interrupt,          /* 0x52  0x00000148   -   ivINT_RTC                      unused by PE */

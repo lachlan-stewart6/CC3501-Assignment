@@ -35,6 +35,15 @@
 #include "IO_Map.h"
 #include "CI2C1.h"
 #include "IntI2cLdd1.h"
+#include "Bluetooth_Term.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
+#include "Timer.h"
+#include "RealTimeLdd1.h"
+#include "TU1.h"
+#include "FC321.h"
+#include "RealTimeLdd2.h"
+#include "TU2.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -54,39 +63,6 @@ extern "C" {
 */
 /* ===================================================================*/
 void Cpu_OnNMIINT(void);
-
-
-/*
-** ===================================================================
-**     Event       :  CI2C1_OnReceiveData (module Events)
-**
-**     Component   :  CI2C1 [InternalI2C]
-**     Description :
-**         This event is invoked when I2C finishes the reception of the
-**         data successfully. This event is not available for the SLAVE
-**         mode and if both RecvChar and RecvBlock are disabled. This
-**         event is enabled only if interrupts/events are enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void CI2C1_OnReceiveData(void);
-
-/*
-** ===================================================================
-**     Event       :  CI2C1_OnTransmitData (module Events)
-**
-**     Component   :  CI2C1 [InternalI2C]
-**     Description :
-**         This event is invoked when I2C finishes the transmission of
-**         the data successfully. This event is not available for the
-**         SLAVE mode and if both SendChar and SendBlock are disabled.
-**         This event is enabled only if interrupts/events are enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-void CI2C1_OnTransmitData(void);
 
 /* END Events */
 

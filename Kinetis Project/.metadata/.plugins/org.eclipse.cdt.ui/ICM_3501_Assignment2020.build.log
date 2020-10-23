@@ -1,0 +1,50 @@
+14:34:55 **** Incremental Build of configuration Debug for project ICM_3501_Assignment2020 ****
+make all 
+Building file: ../Sources/Events.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Sources/Events.d" -MT"Sources/Events.o" -c -o "Sources/Events.o" "../Sources/Events.c"
+Finished building: ../Sources/Events.c
+ 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building file: ../Generated_Code/ASerialLdd1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/ASerialLdd1.d" -MT"Generated_Code/ASerialLdd1.o" -c -o "Generated_Code/ASerialLdd1.o" "../Generated_Code/ASerialLdd1.c"
+Finished building: ../Generated_Code/ASerialLdd1.c
+ 
+Building file: ../Generated_Code/Bluetooth_Term.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Bluetooth_Term.d" -MT"Generated_Code/Bluetooth_Term.o" -c -o "Generated_Code/Bluetooth_Term.o" "../Generated_Code/Bluetooth_Term.c"
+Finished building: ../Generated_Code/Bluetooth_Term.c
+ 
+Building file: ../Generated_Code/Cpu.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Cpu.d" -MT"Generated_Code/Cpu.o" -c -o "Generated_Code/Cpu.o" "../Generated_Code/Cpu.c"
+Finished building: ../Generated_Code/Cpu.c
+ 
+Building file: ../Generated_Code/Inhr1.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Inhr1.d" -MT"Generated_Code/Inhr1.o" -c -o "Generated_Code/Inhr1.o" "../Generated_Code/Inhr1.c"
+Finished building: ../Generated_Code/Inhr1.c
+ 
+Building file: ../Generated_Code/PE_LDD.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/PE_LDD.d" -MT"Generated_Code/PE_LDD.o" -c -o "Generated_Code/PE_LDD.o" "../Generated_Code/PE_LDD.c"
+Finished building: ../Generated_Code/PE_LDD.c
+ 
+Building file: ../Generated_Code/Vectors.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Generated_Code" -std=c99 -MMD -MP -MF"Generated_Code/Vectors.d" -MT"Generated_Code/Vectors.o" -c -o "Generated_Code/Vectors.o" "../Generated_Code/Vectors.c"
+Finished building: ../Generated_Code/Vectors.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/ICM_3501_Assignment2020/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/FC321.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Timer.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+
+14:34:58 Build Finished (took 2s.698ms)
+

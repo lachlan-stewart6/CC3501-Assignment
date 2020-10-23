@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K20P144M72SF1RM Rev. 0, Nov 2011
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-22, 23:51, # CodeGen: 7
+**     Date/Time   : 2020-10-23, 14:41, # CodeGen: 15
 **     Abstract    :
 **
 **     Settings    :
@@ -306,6 +306,15 @@
 /* {Default RTOS Adapter} No RTOS includes */
 #include "CI2C1.h"
 #include "IntI2cLdd1.h"
+#include "Bluetooth_Term.h"
+#include "Inhr1.h"
+#include "ASerialLdd1.h"
+#include "Timer.h"
+#include "RealTimeLdd1.h"
+#include "TU1.h"
+#include "FC321.h"
+#include "RealTimeLdd2.h"
+#include "TU2.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
@@ -393,8 +402,10 @@ void __init_hardware(void)
                 SIM_CLKDIV1_OUTDIV2(0x01) |
                 SIM_CLKDIV1_OUTDIV3(0x03) |
                 SIM_CLKDIV1_OUTDIV4(0x03); /* Set the system prescalers to safe value */
-  /* SIM_SCGC5: PORTB=1,PORTA=1 */
-  SIM_SCGC5 |= (SIM_SCGC5_PORTB_MASK | SIM_SCGC5_PORTA_MASK); /* Enable clock gate for ports to enable pin routing */
+  /* SIM_SCGC5: PORTE=1,PORTB=1,PORTA=1 */
+  SIM_SCGC5 |= SIM_SCGC5_PORTE_MASK |
+               SIM_SCGC5_PORTB_MASK |
+               SIM_SCGC5_PORTA_MASK;   /* Enable clock gate for ports to enable pin routing */
   if ((PMC_REGSC & PMC_REGSC_ACKISO_MASK) != 0x0U) {
     /* PMC_REGSC: ACKISO=1 */
     PMC_REGSC |= PMC_REGSC_ACKISO_MASK; /* Release IO pads after wakeup from VLLS mode. */
@@ -517,6 +528,13 @@ void PE_low_level_init(void)
   NVICIP20 = NVIC_IP_PRI20(0x00);
   /* ### InternalI2C "CI2C1" init code ... */
   CI2C1_Init();
+  /* ### Asynchro serial "Inhr1" init code ... */
+  Inhr1_Init();
+  /* ###  "Bluetooth_Term" init code ... */
+  /* ### RealTime_LDD "RealTimeLdd1" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)RealTimeLdd1_Init(NULL);
+  /* ### RealTime_LDD "RealTimeLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
+  (void)RealTimeLdd2_Init(NULL);
   /* Enable interrupts of the given priority level */
   Cpu_SetBASEPRI(0U);
 }
