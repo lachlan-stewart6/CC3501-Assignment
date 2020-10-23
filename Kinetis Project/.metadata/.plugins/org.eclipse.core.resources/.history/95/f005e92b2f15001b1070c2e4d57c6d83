@@ -51,7 +51,7 @@
 #include <time.h>
 #include <sys/time.h>
 #include <string.h>
-#include "ICM20948.h"
+#include "ICM20948"
 /* User includes (#include below this line is not maintained by Processor Expert) */
 int16_t data[128]; // 256 bytes;
 int data_index=0;
@@ -101,16 +101,20 @@ int main(void)
 	int MagX = 0, MagY = 0, MagZ = 0;
 	int yaw = 0, pitch = 0, roll = 0;
 	word elapsedTime, bluetoothTime;
+	char ICM_addr = 0x69;
+	char MAG_addr = {0x0C};
 	byte acc[6];
 	byte gyro[6];
 	byte mag[6];
+	byte PWR_MGMT_1 = {0x06};
+	byte ICM_WHO_AM_I = {0x00};
 
 	word sent, recv;
 	byte response;
 
 	byte enableICM[2] = {PWR_MGMT_1, 0};
 	CI2C1_SendBlock(enableICM, 2, &sent);
-	CI2C1_SendChar(WHO_AM_I);
+	CI2C1_SendChar(ICM_WHO_AM_I);
 	CI2C1_RecvChar(&response);
 	char ICM_confirm[100];
 	sprintf(ICM_confirm, "IMC Steakhouse Setup (expecting 234): %i\r\n", response);
@@ -118,8 +122,8 @@ int main(void)
 
 	// Bluetooth_Term_Cls();
 	for (;;){
-		CI2C1_SelectSlave(ICM_ADDR);  // select accel and gyro device
-		CI2C1_SendChar(ACCEL_XOUT_H);
+		CI2C1_SelectSlave(ICM_addr);  // select accel and gyro device
+		CI2C1_SendChar(0x2D);
 		CI2C1_RecvBlock(acc,6,&recv);
 
 		AccX = ((acc[0]<<8 | acc[1])/16384.0)*9.81;  // sensitivity values on datasheet
@@ -130,7 +134,7 @@ int main(void)
 		accAngleX = (atan(AccY / sqrt(pow(AccX, 2) + pow(AccZ, 2))) * 180/PI) - 0.58;
 		accAngleY = (atan(-1*AccX / sqrt(pow(AccY, 2) + pow(AccZ, 2))) *180/PI) + 1.58;
 
-		CI2C1_SendChar(GYRO_XOUT_H);
+		CI2C1_SendChar(0x33);
 		CI2C1_RecvBlock(gyro,6,&recv);
 
 		GyroX = (gyro[0]<<8 | gyro[1])/131.0;  // sensitivity values on datasheet
@@ -146,9 +150,9 @@ int main(void)
 		roll = 0.96 * gyroAngleX + 0.04 * accAngleX;
 		pitch = 0.96 * gyroAngleY + 0.04 * accAngleY;
 
-		CI2C1_SelectSlave(MAG_ADDR);  // select magnetometer device
+		CI2C1_SelectSlave(MAG_addr);  // select magnetometer device
 
-		CI2C1_SendChar(MAG_XOUT_H);
+		CI2C1_SendChar(0x11);
 		CI2C1_RecvBlock(mag,6,&recv);
 
 		MagX = (acc[0]<<8 | acc[1])*0.15;  // sensitivity values on datasheet

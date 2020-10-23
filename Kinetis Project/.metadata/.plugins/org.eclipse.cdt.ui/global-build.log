@@ -878,3 +878,537 @@ Finished building target: 87686.elf
 21:23:39 **** Incremental Build of configuration Debug for project 87686 ****
 make all 
 make: Nothing to be done for 'all'.
+21:46:18 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+21:46:53 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+make: Nothing to be done for 'all'.
+21:55:46 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+21:55:56 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+make: Nothing to be done for 'all'.
+22:30:14 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+22:30:55 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+make: Nothing to be done for 'all'.
+22:41:15 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+22:41:21 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+make: Nothing to be done for 'all'.
+22:48:39 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+make: Nothing to be done for 'all'.
+22:55:46 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+22:56:23 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+../Sources/main.c:54:20: fatal error: ICM20948: No such file or directory
+ #include "ICM20948"
+                    ^
+compilation terminated.
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:56:31 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/ICM20948.h:6:20: error: expected identifier or '(' before numeric constant
+ #define PWR_MGMT_1 0x06 // Requires a 0 for power on
+                    ^
+../Sources/main.c:109:7: note: in expansion of macro 'PWR_MGMT_1'
+  byte PWR_MGMT_1 = {0x06};
+       ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:57:55 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+22:58:30 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/ICM20948.h:6:20: error: expected identifier or '(' before numeric constant
+ #define PWR_MGMT_1 0x06 // Requires a 0 for power on
+                    ^
+../Sources/main.c:109:7: note: in expansion of macro 'PWR_MGMT_1'
+  byte PWR_MGMT_1 = {0x06};
+       ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:58:40 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/ICM20948.h:6:20: error: expected identifier or '(' before numeric constant
+ #define PWR_MGMT_1 0x06 // Requires a 0 for power on
+                    ^
+../Sources/main.c:109:7: note: in expansion of macro 'PWR_MGMT_1'
+  byte PWR_MGMT_1 = {0x06};
+       ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:58:45 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/ICM20948.h:6:20: error: expected identifier or '(' before numeric constant
+ #define PWR_MGMT_1 0x06 // Requires a 0 for power on
+                    ^
+../Sources/main.c:109:7: note: in expansion of macro 'PWR_MGMT_1'
+  byte PWR_MGMT_1 = {0x06};
+       ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:58:49 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/ICM20948.h:6:20: error: expected identifier or '(' before numeric constant
+ #define PWR_MGMT_1 0x06 // Requires a 0 for power on
+                    ^
+../Sources/main.c:109:7: note: in expansion of macro 'PWR_MGMT_1'
+  byte PWR_MGMT_1 = {0x06};
+       ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:59:00 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/ICM20948.h:7:20: error: expected identifier or '(' before numeric constant
+ #define PWR_MGMT_1 0x06
+                    ^
+../Sources/main.c:109:7: note: in expansion of macro 'PWR_MGMT_1'
+  byte PWR_MGMT_1 = {0x06};
+       ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:59:05 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+22:59:08 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+22:59:14 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/ICM20948.h:7:20: error: expected identifier or '(' before numeric constant
+ #define PWR_MGMT_1 0x07
+                    ^
+../Sources/main.c:109:7: note: in expansion of macro 'PWR_MGMT_1'
+  byte PWR_MGMT_1 = {0x06};
+       ^
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+22:59:20 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+22:59:28 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:12:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:11:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:12:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
+23:03:59 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:15:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:16:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:15:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/main.c: In function 'main':
+../Sources/main.c:113:17: error: 'ICM_WHO_AM_I' undeclared (first use in this function)
+  CI2C1_SendChar(ICM_WHO_AM_I);
+                 ^
+../Sources/main.c:113:17: note: each undeclared identifier is reported only once for each function it appears in
+Sources/subdir.mk:21: recipe for target 'Sources/main.o' failed
+make: *** [Sources/main.o] Error 1
+23:04:10 **** Incremental Build of configuration Debug for project 87686 ****
+make all 
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:15:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:16:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:15:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 

@@ -1,6 +1,34 @@
-21:23:39 **** Incremental Build of configuration Debug for project 87686 ****
+23:04:10 **** Incremental Build of configuration Debug for project 87686 ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../Sources/main.c
+Invoking: Cross ARM C Compiler
+arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/PDD" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Static_Code/IO_Map" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Sources" -I"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Generated_Code" -std=c99 -MMD -MP -MF"Sources/main.d" -MT"Sources/main.o" -c -o "Sources/main.o" "../Sources/main.c"
+In file included from ../Sources/main.c:54:0:
+../Sources/ICM20948.h:14:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:13:0: note: this is the location of the previous definition
+ #define ACCEL_FS 0 // +-2G OR 16384 LSB/g
+ ^
+../Sources/ICM20948.h:15:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+../Sources/ICM20948.h:14:0: note: this is the location of the previous definition
+ #define ACCEL_FS 1 //+-4G OR 8192 LSB/g
+ ^
+../Sources/ICM20948.h:16:0: warning: "ACCEL_FS" redefined [enabled by default]
+ #define ACCEL_FS 3 //+-16G OR 2048 LSB/g
+ ^
+../Sources/ICM20948.h:15:0: note: this is the location of the previous definition
+ #define ACCEL_FS 2 //+-8G OR 4096 LSB/g
+ ^
+Finished building: ../Sources/main.c
+ 
+Building target: 87686.elf
+Invoking: Cross ARM C++ Linker
+arm-none-eabi-g++ -mcpu=cortex-m4 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g3 -T "C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files/ProcessorExpert.ld" -Xlinker --gc-sections -L"C:/Users/jc493320/Documents/GitHub/CC3501-Assignment/Kinetis Project/87686/Project_Settings/Linker_Files" -Wl,-Map,"87686.map" -specs=nano.specs -specs=nosys.specs -o "87686.elf"  ./Sources/Events.o ./Sources/main.o  ./Project_Settings/Startup_Code/startup.o  ./Generated_Code/ASerialLdd1.o ./Generated_Code/BluetoothTimer.o ./Generated_Code/Bluetooth_Term.o ./Generated_Code/CI2C1.o ./Generated_Code/Cpu.o ./Generated_Code/GyroTimer.o ./Generated_Code/Inhr1.o ./Generated_Code/IntI2cLdd1.o ./Generated_Code/PE_LDD.o ./Generated_Code/RealTimeLdd1.o ./Generated_Code/RealTimeLdd2.o ./Generated_Code/TU1.o ./Generated_Code/TU2.o ./Generated_Code/Vectors.o   
+Finished building target: 87686.elf
+ 
 
-21:23:39 Build Finished (took 201ms)
+23:04:10 Build Finished (took 656ms)
 
