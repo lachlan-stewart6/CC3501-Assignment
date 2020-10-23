@@ -53,13 +53,17 @@ int main(void)
   /* For example: for(;;) { } */
   byte WHO_AM_I = {0x00};  // expect 0xEA
   byte IMC_Slave_addr = 0x69;
-  byte enable_ICM[2] = {0x06, 1};
+  byte enable_ICM[2] = {0x06, 1<<6};
   char response;
+  short int icm_data[3];
   word sent;
+  word recv;
   CI2C1_SelectSlave(IMC_Slave_addr);
   CI2C1_SendBlock(enable_ICM, 2, &sent);
+  for (;;) {
   CI2C1_SendChar(WHO_AM_I);
-  CI2C1_RecvChar(&response);
+  CI2C1_RecvBlock(icm_data, 6, &recv);
+  }
 
   /*** Don't write any code pass this line, or it will be deleted during code generation. ***/
   /*** RTOS startup code. Macro PEX_RTOS_START is defined by the RTOS component. DON'T MODIFY THIS CODE!!! ***/
