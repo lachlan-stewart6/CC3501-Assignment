@@ -55,36 +55,10 @@
 #include <sys/time.h>
 #include <string.h>
 #include "ICM20948.h"
+#include "main.h"
 /* User includes (#include below this line is not maintained by Processor Expert) */
 int16_t data[128]; // 256 bytes;
 int data_index=0;
-
-void sendBT(int pitch, int roll, int yaw, int MagX, int MagY,
-			int MagZ, word elapsedTime) {
-		Bluetooth_Term_MoveTo(1,1);
-		Bluetooth_Term_SendStr("Pitch: ");
-		Bluetooth_Term_SendNum(pitch);
-		Bluetooth_Term_SendStr("\r\n");
-		Bluetooth_Term_SendStr("Roll: ");
-		Bluetooth_Term_SendNum(roll);
-		Bluetooth_Term_SendStr("\r\n");
-		Bluetooth_Term_SendStr("Yaw: ");
-		Bluetooth_Term_SendNum(yaw);
-		Bluetooth_Term_SendStr("\r\n");
-		Bluetooth_Term_SendStr("MagX: ");
-		Bluetooth_Term_SendNum(MagX);
-		Bluetooth_Term_SendStr("\r\n");
-		Bluetooth_Term_SendStr("MagY: ");
-		Bluetooth_Term_SendNum(MagY);
-		Bluetooth_Term_SendStr("\r\n");
-		Bluetooth_Term_SendStr("MagZ: ");
-		Bluetooth_Term_SendNum(MagZ);
-		Bluetooth_Term_SendStr("\r\n");
-		Bluetooth_Term_SendStr("Time(us): ");
-		Bluetooth_Term_SendNum(elapsedTime);
-		Bluetooth_Term_SendStr("\r\n");
-		//Bluetooth_Term_Cls();
-	}
 
 
 /*lint -save  -e970 Disable MISRA rule (6.3) checking. */
@@ -92,22 +66,11 @@ int main(void)
 /*lint -restore Enable MISRA rule (6.3) checking. */
 {
 	/* Write your local variable definition here */
-
+	extern MessageQueue msg_queue;
+		extern Message msg;
 	/*** Processor Expert internal initialization. DON'T REMOVE THIS CODE!!! ***/
 	PE_low_level_init();
 	/*** End of Processor Expert internal initialization.                    ***/
-	float PI = 3.141592654;
-	int AccX, AccY, AccZ;
-	int accAngleX = 0, accAngleY = 0;
-	int GyroX, GyroY, GyroZ;
-	int gyroAngleX = 0, gyroAngleY = 0, gyroAngleZ = 0;
-	int MagX = 0, MagY = 0, MagZ = 0;
-	int yaw = 0, pitch = 0, roll = 0;
-	word elapsedTime, bluetoothTime;
-	byte acc[6];
-	byte gyro[6];
-	byte mag[6];
-
 	word sent, recv;
 	byte response;
 
@@ -120,53 +83,8 @@ int main(void)
 	Bluetooth_Term_SendStr(ICM_confirm);
 
 	// Bluetooth_Term_Cls();
-	for (;;){
-		CI2C1_SelectSlave(ICM_ADDR);  // select accel and gyro device
-		CI2C1_SendChar(ACCEL_XOUT_H);
-		CI2C1_RecvBlock(acc,6,&recv);
-
-		AccX = ((acc[0]<<8 | acc[1])/16384.0)*9.81;  // sensitivity values on datasheet
-		AccY = ((acc[2]<<8 | acc[3])/16384.0)*9.81;
-		AccZ = ((acc[4]<<8 | acc[5])/16384.0)*9.81;
-
-		// calculate pitch and roll from accelerometer
-		accAngleX = (atan(AccY / sqrt(pow(AccX, 2) + pow(AccZ, 2))) * 180/PI) - 0.58;
-		accAngleY = (atan(-1*AccX / sqrt(pow(AccY, 2) + pow(AccZ, 2))) *180/PI) + 1.58;
-
-		CI2C1_SendChar(GYRO_XOUT_H);
-		CI2C1_RecvBlock(gyro,6,&recv);
-
-		GyroX = (gyro[0]<<8 | gyro[1])/131.0;  // sensitivity values on datasheet
-		GyroY = (gyro[2]<<8 | gyro[3])/131.0;
-		GyroZ = (gyro[4]<<8 | gyro[5])/131.0;
-
-		BluetoothTimer_GetTimeUS(&elapsedTime);
-		gyroAngleX = gyroAngleX + (GyroX * (elapsedTime/1000000)); // deg/s * s = deg
-		gyroAngleY = gyroAngleY + (GyroY * (elapsedTime/1000000));
-		BluetoothTimer_Reset();
-
-		yaw =  yaw + GyroZ * elapsedTime/1000000;
-		roll = 0.96 * gyroAngleX + 0.04 * accAngleX;
-		pitch = 0.96 * gyroAngleY + 0.04 * accAngleY;
-
-		CI2C1_SelectSlave(MAG_ADDR);  // select magnetometer device
-
-		CI2C1_SendChar(MAG_XOUT_H);
-		CI2C1_RecvBlock(mag,6,&recv);
-
-		MagX = (acc[0]<<8 | acc[1])*0.15;  // sensitivity values on datasheet
-		MagZ = (acc[2]<<8 | acc[3])*0.15;
-		MagY = (acc[4]<<8 | acc[5])*0.15;
-
-		GyroTimer_GetTimeMS(&bluetoothTime);
-		if (bluetoothTime >= 1000){
-			sendBT(AccX, AccY, AccZ, MagX, MagY, MagZ, elapsedTime);
-			GyroTimer_Reset();
-		}
-
-	}
-
-
+	_lwmsgq_init(&msg_queue, QUEUE_LENGTH,
+	sizeof(Message)/sizeof(_mqx_max_type));
 
 
 	/*** Don't write any code pass this line, or it will be deleted during code generation. ***/

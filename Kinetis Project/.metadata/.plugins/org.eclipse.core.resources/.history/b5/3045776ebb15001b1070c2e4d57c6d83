@@ -1,0 +1,208 @@
+<CodeGenerationInfo>
+  <ToolchainSettings>
+    <option>
+      <name>PE_G_4PEx_ToolChain_CompilerCpp_SearchUserPaths</name>
+      <values lines_count="10">
+        <Line>"${ProjDirPath}/MQXLITE/include"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/config"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/kernel"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m/core/M4"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m/compiler/cwgcc"</Line>
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Asm_SearchUserPaths</name>
+      <values lines_count="6">
+        <Line>"${ProjDirPath}/MQXLITE/include"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/config"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/kernel"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m/core/M4"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m/compiler/cwgcc"</Line>
+      </values>
+    </option>
+    <option>
+      <name>PE_G_4PEx_ToolChain_Compiler_SearchUserPaths</name>
+      <values lines_count="10">
+        <Line>"${ProjDirPath}/MQXLITE/include"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/config"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/kernel"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m/core/M4"</Line>
+        <Line>"${ProjDirPath}/MQXLITE/psp/cortex_m/compiler/cwgcc"</Line>
+        <Line>"${ProjDirPath}/Static_Code/PDD"</Line>
+        <Line>"${ProjDirPath}/Static_Code/IO_Map"</Line>
+        <Line>"${ProjDirPath}/Sources"</Line>
+        <Line>"${ProjDirPath}/Generated_Code"</Line>
+      </values>
+    </option>
+  </ToolchainSettings>
+  <GeneratedFilesList>
+    <GeneratedByPE>
+      <File Name="Generated_Code/PE_LDD.h" FileDate="2020-09-07, 15:04:11" FileAge="1599455051907" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/USBDCD_PDD.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366246" FileType="1048576" />
+      <File Name="MQXLITE/psp/cortex_m/psp_iinit.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269350" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/PE_LDD.c" FileDate="2020-09-07, 15:04:11" FileAge="1599455051891" FileType="45637" CompNumb="4" />
+      <File Name="MQXLITE/psp/cortex_m/psp_cpu.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269334" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/PE_Error.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366343" FileType="45637" />
+      <File Name="MQXLITE/include/mqxlite.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269006" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/int_vtab.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269287" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/int_kisr.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269271" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/lwlog_prv.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268943" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/RTC_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365942" FileType="1048576" />
+      <File Name="Static_Code/PDD/SPI_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365965" FileType="1048576" />
+      <File Name="Static_Code/PDD/FMC_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365864" FileType="1048576" />
+      <File Name="MQXLITE/include/log.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268928" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/Vectors.c" FileDate="2020-09-07, 15:04:11" FileAge="1599455051907" FileType="45637" CompNumb="4" />
+      <File Name="MQXLITE/psp/cortex_m/int_inst.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269271" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/psp_comp.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269334" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/queue.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269084" FileType="16384" CompNumb="28" />
+      <File Name="ProjectInfo.xml" FileDate="2020-09-09, 09:10:27" FileAge="1599606627664" FileType="45637" />
+      <File Name="MQXLITE/include/mqx_cpudef.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269037" FileType="16384" CompNumb="28" />
+      <File Name="Sources/main.h" FileDate="2020-09-07, 14:53:27" FileAge="1599454407098" FileType="128" />
+      <File Name="MQXLITE/kernel/lwlog.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269131" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/Cpu.h" FileDate="2020-09-02, 10:07:51" FileAge="1599005271802" FileType="45637" CompNumb="4" />
+      <File Name="MQXLITE/kernel/mqxlite.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269178" FileType="16384" CompNumb="28" />
+      <File Name="Sources/main.c" FileDate="2020-09-07, 14:59:05" FileAge="1599454745582" FileType="128" />
+      <File Name="Static_Code/PDD/WDOG_PDD.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366267" FileType="1048576" />
+      <File Name="Generated_Code/Cpu.c" FileDate="2020-09-07, 15:04:11" FileAge="1599455051853" FileType="45637" CompNumb="4" />
+      <File Name="MQXLITE/psp/cortex_m/int_unx.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269287" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/IO_Map/MK20D5.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365792" FileType="1048576" CompNumb="4" />
+      <File Name="Generated_Code/ASerialLdd1.h" FileDate="2020-09-06, 17:29:38" FileAge="1599377378190" FileType="45637" CompNumb="25" />
+      <File Name="Generated_Code/ASerialLdd1.c" FileDate="2020-09-06, 17:29:38" FileAge="1599377378190" FileType="45637" CompNumb="25" />
+      <File Name="MQXLITE/include/mutex_prv.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269068" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/Inhr1.h" FileDate="2020-09-06, 17:29:38" FileAge="1599377378180" FileType="45637" CompNumb="24" />
+      <File Name="MQXLITE/psp/cortex_m/psp_supp.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269365" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/Inhr1.c" FileDate="2020-09-06, 17:29:38" FileAge="1599377378170" FileType="45637" CompNumb="24" />
+      <File Name="MQXLITE/psp/cortex_m/psp_supp.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269365" FileType="16384" CompNumb="28" />
+      <File Name="Project_Settings/Startup_Code/startup.c" FileDate="2020-09-02, 09:36:05" FileAge="1599003365585" FileType="16384" CompNumb="4" />
+      <File Name="MQXLITE/include/lwsem_prv.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268990" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/mqx_str.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269053" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/MCG_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365909" FileType="1048576" />
+      <File Name="MQXLITE/include/lwsem.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268975" FileType="16384" CompNumb="28" />
+      <File Name="Documentation/doxygen/ASerialLdd1_component.txt" FileDate="2020-09-07, 14:19:09" FileAge="1599452349576" FileType="45637" CompNumb="25" />
+      <File Name="MQXLITE/kernel/time_ticks.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269225" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/core/M4/psp_prv.inc" FileDate="2020-09-02, 10:07:49" FileAge="1599005269459" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/psp_prv.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269350" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/lwmem_prv.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268959" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/PE_Const.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366340" FileType="45637" />
+      <File Name="Static_Code/PDD/I2C_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365894" FileType="1048576" />
+      <File Name="MQXLITE/include/lwmsgq.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268975" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/cortex.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269256" FileType="16384" CompNumb="28" />
+      <File Name="Sources/mqx_tasks.h" FileDate="2020-09-06, 17:29:38" FileAge="1599377378300" FileType="131328" />
+      <File Name="MQXLITE/psp/cortex_m/cortex.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269240" FileType="16384" CompNumb="28" />
+      <File Name="Sources/mqx_tasks.c" FileDate="2020-09-07, 15:04:06" FileAge="1599455046857" FileType="131328" />
+      <File Name="MQXLITE/psp/cortex_m/stack_de.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269428" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/SystemTimer1.h" FileDate="2020-09-02, 10:07:51" FileAge="1599005271755" FileType="45637" CompNumb="29" />
+      <File Name="Generated_Code/SystemTimer1.c" FileDate="2020-09-02, 10:07:51" FileAge="1599005271755" FileType="45637" CompNumb="29" />
+      <File Name="MQXLITE/kernel/sched.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269209" FileType="16384" CompNumb="28" />
+      <File Name="Sources/Events.h" FileDate="2020-09-07, 14:19:09" FileAge="1599452349733" FileType="131328" />
+      <File Name="MQXLITE/kernel/mqx_utils.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269193" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/compiler/cwgcc/comp.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269475" FileType="16384" CompNumb="28" />
+      <File Name="Sources/Events.c" FileDate="2020-09-07, 14:19:09" FileAge="1599452349733" FileType="131328" />
+      <File Name="MQXLITE/include/mqx_inc.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269053" FileType="16384" CompNumb="28" />
+      <File Name="Documentation/doxygen/CalumMaitland-lab4_project.txt" FileDate="2020-09-07, 15:04:11" FileAge="1599455051875" FileType="45637" CompNumb="4" />
+      <File Name="MQXLITE/psp/cortex_m/compiler/cwgcc/asm_mac.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269475" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/PE_Types.h" FileDate="2020-09-07, 15:04:11" FileAge="1599455051853" FileType="45637" />
+      <File Name="Documentation/doxygen/pex.css" FileDate="2020-09-02, 09:36:05" FileAge="1599003365650" FileType="16384" CompNumb="4" />
+      <File Name="MQXLITE/include/mqx_macros.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269053" FileType="16384" CompNumb="28" />
+      <File Name="Documentation/CalumMaitland-lab4_SIGNALS.txt" FileDate="2020-09-09, 09:10:27" FileAge="1599606627118" FileType="3072" />
+      <File Name="MQXLITE/psp/cortex_m/psp_cpudef.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269350" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/int_xcpt.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269303" FileType="16384" CompNumb="28" />
+      <File Name="Documentation/doxygen/RoutingReport_component.txt" FileDate="2020-09-02, 09:36:06" FileAge="1599003366313" FileType="45637" CompNumb="4" />
+      <File Name="MQXLITE/include/lwlog.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268943" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/kernel/lwmsgq.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269147" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/lwmsgq_prv.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268975" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/GPIO_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365885" FileType="1048576" />
+      <File Name="Static_Code/PDD/DMA_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365849" FileType="1048576" />
+      <File Name="MQXLITE/include/mqx_cnfg.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269037" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/MQX1.h" FileDate="2020-09-07, 14:30:31" FileAge="1599453031593" FileType="45637" CompNumb="28" />
+      <File Name="Generated_Code/MQX1.c" FileDate="2020-09-07, 14:30:31" FileAge="1599453031593" FileType="45637" CompNumb="28" />
+      <File Name="MQXLITE/include/lwtimer_prv.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268990" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/kernel/qu_test.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269209" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/DMAMUX_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365842" FileType="1048576" />
+      <File Name="Generated_Code/AccelI2C.h" FileDate="2020-09-07, 15:04:11" FileAge="1599455051822" FileType="45637" CompNumb="33" />
+      <File Name="MQXLITE/config/user_config.h" FileDate="2020-09-07, 14:30:31" FileAge="1599453031618" FileType="45637" CompNumb="28" />
+      <File Name="Generated_Code/AccelI2C.c" FileDate="2020-09-07, 15:04:11" FileAge="1599455051838" FileType="45637" CompNumb="33" />
+      <File Name="Generated_Code/AdcLdd1.h" FileDate="2020-09-02, 10:07:51" FileAge="1599005271724" FileType="45637" CompNumb="11" />
+      <File Name="Documentation/doxygen/SystemTimer1_component.txt" FileDate="2020-09-02, 10:07:51" FileAge="1599005271740" FileType="45637" CompNumb="29" />
+      <File Name="MQXLITE/include/mqxlite_prv.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269022" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/kernel/mutex.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269193" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/AdcLdd1.c" FileDate="2020-09-02, 10:07:51" FileAge="1599005271724" FileType="45637" CompNumb="11" />
+      <File Name="MQXLITE/psp/cortex_m/int_pvta.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269271" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/EWM_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365858" FileType="1048576" />
+      <File Name="Static_Code/PDD/SAI_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365949" FileType="1048576" />
+      <File Name="MQXLITE/config/task_template_list.h" FileDate="2020-09-07, 14:30:31" FileAge="1599453031618" FileType="45637" CompNumb="28" />
+      <File Name="Static_Code/PDD/CRC_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365834" FileType="1048576" />
+      <File Name="MQXLITE/config/task_template_list.c" FileDate="2020-09-07, 14:30:31" FileAge="1599453031603" FileType="45637" CompNumb="28" />
+      <File Name="MQXLITE/kernel/idletask.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269100" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/PDD_Types.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365806" FileType="1048576" CompNumb="4" />
+      <File Name="Static_Code/PDD/VREF_PDD.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366260" FileType="1048576" />
+      <File Name="Documentation/doxygen/AdcLdd1_component.txt" FileDate="2020-09-02, 10:07:51" FileAge="1599005271708" FileType="45637" CompNumb="11" />
+      <File Name="Static_Code/PDD/UART_PDD.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366238" FileType="1048576" />
+      <File Name="MQXLITE/kernel/lwmem.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269147" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/lwevent_prv.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268943" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/IO_Map.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366337" FileType="45637" />
+      <File Name="Documentation/CalumMaitland-lab4_Settings.xml" FileDate="2020-09-07, 15:04:12" FileAge="1599455052054" FileType="3072" />
+      <File Name="Static_Code/PDD/PDB_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365922" FileType="1048576" />
+      <File Name="Static_Code/PDD/PORT_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365935" FileType="1048576" />
+      <File Name="Static_Code/PDD/LPTMR_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365901" FileType="1048576" />
+      <File Name="MQXLITE/kernel/int.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269100" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/mem_zero.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269303" FileType="16384" CompNumb="28" />
+      <File Name="Documentation/doxygen/pex.doxyfile" FileDate="2020-09-02, 09:36:06" FileAge="1599003366305" FileType="45637" CompNumb="4" />
+      <File Name="Static_Code/PDD/CMT_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365826" FileType="1048576" />
+      <File Name="MQXLITE/psp/cortex_m/psplite.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269318" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/lwevent.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268928" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/kinetis.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269303" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/PIT_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365929" FileType="1048576" />
+      <File Name="MQXLITE/psp/cortex_m/psp_tiad.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269381" FileType="16384" CompNumb="28" />
+      <File Name="Project_Settings/Debugger/mqx.tad" FileDate="2020-09-02, 10:07:49" FileAge="1599005269084" FileType="16384" CompNumb="28" />
+      <File Name="Documentation/CalumMaitland-lab4.txt" FileDate="2020-09-07, 15:04:12" FileAge="1599455052479" FileType="3072" />
+      <File Name="MQXLITE/psp/cortex_m/psp_ticks.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269381" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/stack_bu.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269412" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/ADC_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365809" FileType="1048576" />
+      <File Name="MQXLITE/kernel/klog.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269115" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/psptypes.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269318" FileType="16384" CompNumb="28" />
+      <File Name="Project_Settings/Debugger/MQXDeviceDescription.tad" FileDate="2020-09-02, 10:07:51" FileAge="1599005271724" FileType="45637" CompNumb="28" />
+      <File Name="Static_Code/PDD/SysTick_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365973" FileType="1048576" />
+      <File Name="Static_Code/PDD/OSC_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365916" FileType="1048576" />
+      <File Name="MQXLITE/psp/cortex_m/int_gkis.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269256" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/IntI2cLdd1.h" FileDate="2020-09-07, 15:04:11" FileAge="1599455051765" FileType="45637" CompNumb="34" />
+      <File Name="Static_Code/PDD/USB_PDD.h" FileDate="2020-09-02, 09:36:06" FileAge="1599003366253" FileType="1048576" />
+      <File Name="Generated_Code/IntI2cLdd1.c" FileDate="2020-09-07, 15:04:11" FileAge="1599455051791" FileType="45637" CompNumb="34" />
+      <File Name="MQXLITE/kernel/lwevent.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269131" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/CMP_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365818" FileType="1048576" />
+      <File Name="MQXLITE/include/mqxlite_cnfg.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269022" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/lwtimer.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268990" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/FTFL_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365869" FileType="1048576" />
+      <File Name="Generated_Code/Term.h" FileDate="2020-09-06, 17:29:38" FileAge="1599377378170" FileType="45637" CompNumb="23" />
+      <File Name="MQXLITE/psp/cortex_m/psp_tipr.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269396" FileType="16384" CompNumb="28" />
+      <File Name="Documentation/doxygen/IntI2cLdd1_component.txt" FileDate="2020-09-07, 15:04:11" FileAge="1599455051806" FileType="45637" CompNumb="34" />
+      <File Name="Generated_Code/Term.c" FileDate="2020-09-06, 17:29:38" FileAge="1599377378162" FileType="45637" CompNumb="23" />
+      <File Name="MQXLITE/psp/cortex_m/types.inc" FileDate="2020-09-02, 10:07:49" FileAge="1599005269443" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/kernel/lwtimer.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269162" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/mutex.h" FileDate="2020-09-02, 10:07:49" FileAge="1599005269068" FileType="16384" CompNumb="28" />
+      <File Name="Project_Settings/Linker_Files/ProcessorExpert.ld" FileDate="2020-09-02, 10:07:51" FileAge="1599005271849" FileType="8" CompNumb="4" />
+      <File Name="Static_Code/PDD/SIM_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365955" FileType="1048576" />
+      <File Name="Generated_Code/LightADC.h" FileDate="2020-09-06, 17:26:29" FileAge="1599377189700" FileType="45637" CompNumb="10" />
+      <File Name="MQXLITE/psp/cortex_m/sc_irdyq.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269412" FileType="16384" CompNumb="28" />
+      <File Name="Generated_Code/LightADC.c" FileDate="2020-09-06, 17:26:29" FileAge="1599377189710" FileType="45637" CompNumb="10" />
+      <File Name="MQXLITE/include/klog.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268928" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/kernel/task.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269225" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/stack_st.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269428" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/kernel/lwsem.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269162" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/include/lwmem.h" FileDate="2020-09-02, 10:07:48" FileAge="1599005268959" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/core/M4/dispatch.S" FileDate="2020-09-02, 10:07:49" FileAge="1599005269459" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/psp_tinm.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269381" FileType="16384" CompNumb="28" />
+      <File Name="Static_Code/PDD/FTM_PDD.h" FileDate="2020-09-02, 09:36:05" FileAge="1599003365875" FileType="1048576" />
+      <File Name="MQXLITE/psp/cortex_m/psp_tisu.c" FileDate="2020-09-02, 10:07:49" FileAge="1599005269396" FileType="16384" CompNumb="28" />
+      <File Name="MQXLITE/psp/cortex_m/core/M4/boot.S" FileDate="2020-09-02, 10:07:49" FileAge="1599005269443" FileType="16384" CompNumb="28" />
+    </GeneratedByPE>
+  </GeneratedFilesList>
+  <CodeGenReference>29</CodeGenReference>
+</CodeGenerationInfo>

@@ -6,7 +6,7 @@
 **     Version     : Component 01.110, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
+**     Date/Time   : 2020-10-24, 16:38, # CodeGen: 31
 **     Abstract    :
 **         MQX Lite RTOS Adapter component.
 **     Settings    :
@@ -61,17 +61,15 @@
 
 
 /* Task stacks definition */
-uint8_t AccelData_task_stack[ACCELDATA_TASK_STACK_SIZE];
-uint8_t GyroData_task_stack[GYRODATA_TASK_STACK_SIZE];
-uint8_t MagData_task_stack[MAGDATA_TASK_STACK_SIZE];
-uint8_t SendBluetooth_task_stack[SENDBLUETOOTH_TASK_STACK_SIZE];
+uint8_t bing_task_stack[BING_TASK_STACK_SIZE];
+uint8_t bang_task_stack[BANG_TASK_STACK_SIZE];
+uint8_t blop_task_stack[BLOP_TASK_STACK_SIZE];
 
 /* Task stacks array of pointers */
 const uint8_t * mqx_task_stack_pointers[] = {
-/* "AccelData" task                    */  AccelData_task_stack,
-/* "GyroData" task                     */  GyroData_task_stack,
-/* "MagData" task                      */  MagData_task_stack,
-/* "SendBluetooth" task                */  SendBluetooth_task_stack,
+/* "bing" task                         */  bing_task_stack,
+/* "bang" task                         */  bang_task_stack,
+/* "blop" task                         */  blop_task_stack,
 /* Stack array end                     */  NULL
 };
 

@@ -1,0 +1,26 @@
+/*
+ * main.h
+ *
+ *  Created on: 24 Oct 2020
+ *      Author: jc493320
+ */
+
+#ifndef SOURCES_MAIN_H_
+#define SOURCES_MAIN_H_
+
+typedef struct {
+	int msg_id ;
+	byte acc[6];
+	byte gyro[6];
+	byte mag[6];
+} Message ;
+
+typedef struct {
+	LWMSGQ_STRUCT hearder;
+	Message msgs [QUEUE_LENGTH];
+}MessageQueue;
+
+
+
+
+#endif /* SOURCES_MAIN_H_ */

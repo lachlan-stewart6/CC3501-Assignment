@@ -5,15 +5,14 @@
 **     Component   : Events
 **     Version     : Driver 01.00
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
+**     Date/Time   : 2020-10-24, 16:38, # CodeGen: 31
 **     Abstract    :
 **         This is user's event module.
 **         Put your event handler code here.
 **     Contents    :
-**         AccelData_task - void AccelData_task(uint32_t task_init_data);
-**         GyroData_task - void GyroData_task(uint32_t task_init_data);
-**         MagData_task - void MagData_task(uint32_t task_init_data);
-**         SendBluetooth_task - void SendBluetooth_task(uint32_t task_init_data);
+**         bing_task - void bing_task(uint32_t task_init_data);
+**         bang_task - void bang_task(uint32_t task_init_data);
+**         blop_task - void blop_task(uint32_t task_init_data);
 **
 ** ###################################################################*/
 /*!
@@ -56,7 +55,7 @@ extern "C" {
 
 /*
 ** ===================================================================
-**     Event       :  AccelData_task (module mqx_tasks)
+**     Event       :  bing_task (module mqx_tasks)
 **
 **     Component   :  Task1 [MQXLite_task]
 **     Description :
@@ -68,11 +67,11 @@ extern "C" {
 **     Returns     : Nothing
 ** ===================================================================
 */
-void AccelData_task(uint32_t task_init_data);
+void bing_task(uint32_t task_init_data);
 
 /*
 ** ===================================================================
-**     Event       :  GyroData_task (module mqx_tasks)
+**     Event       :  bang_task (module mqx_tasks)
 **
 **     Component   :  Task2 [MQXLite_task]
 **     Description :
@@ -84,11 +83,11 @@ void AccelData_task(uint32_t task_init_data);
 **     Returns     : Nothing
 ** ===================================================================
 */
-void GyroData_task(uint32_t task_init_data);
+void bang_task(uint32_t task_init_data);
 
 /*
 ** ===================================================================
-**     Event       :  MagData_task (module mqx_tasks)
+**     Event       :  blop_task (module mqx_tasks)
 **
 **     Component   :  Task3 [MQXLite_task]
 **     Description :
@@ -100,23 +99,7 @@ void GyroData_task(uint32_t task_init_data);
 **     Returns     : Nothing
 ** ===================================================================
 */
-void MagData_task(uint32_t task_init_data);
-
-/*
-** ===================================================================
-**     Event       :  SendBluetooth_task (module mqx_tasks)
-**
-**     Component   :  Task4 [MQXLite_task]
-**     Description :
-**         MQX task routine. The routine is generated into mqx_tasks.c
-**         file.
-**     Parameters  :
-**         NAME            - DESCRIPTION
-**         task_init_data  - 
-**     Returns     : Nothing
-** ===================================================================
-*/
-void SendBluetooth_task(uint32_t task_init_data);
+void blop_task(uint32_t task_init_data);
 
 
 /* END mqx_tasks */

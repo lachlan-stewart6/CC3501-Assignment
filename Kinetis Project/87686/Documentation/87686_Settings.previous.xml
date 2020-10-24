@@ -1034,14 +1034,14 @@ PE_DEBUGHALT();
           <event name="OnChannel7" v="don&amp;apos;t generate code" />
         </Events>
       </inhrbean>
-      <list name="Task Template List" v="4">
+      <list name="Task Template List" v="3">
         <boolgroup name="Task1" v="Enabled">
           <inhrbean type="MQXLite_task">
             <Enabled v="Y" />
             <Template v="Task" />
             <Properties>
-              <Name v="AccelData" />
-              <Entry_point_function v="Task1_task" />
+              <Name v="bing" />
+              <Entry_point_function v="bing_task" />
               <Stack_size v="512" />
               <Priority v="8" />
               <Creation_parameter v="0" />
@@ -1056,7 +1056,7 @@ PE_DEBUGHALT();
             <Events>
               <Event_module_name v="mqx_tasks" />
               <event name="OnTask" v="generate code">
-                <Event_procedure_name v="Task1_task" />
+                <Event_procedure_name v="bing_task" />
               </event>
             </Events>
           </inhrbean>
@@ -1066,8 +1066,8 @@ PE_DEBUGHALT();
             <Enabled v="Y" />
             <Template v="Task" />
             <Properties>
-              <Name v="GyroData" />
-              <Entry_point_function v="Task2_task" />
+              <Name v="bang" />
+              <Entry_point_function v="bang_task" />
               <Stack_size v="512" />
               <Priority v="8" />
               <Creation_parameter v="0" />
@@ -1082,7 +1082,7 @@ PE_DEBUGHALT();
             <Events>
               <Event_module_name v="mqx_tasks" />
               <event name="OnTask" v="generate code">
-                <Event_procedure_name v="Task2_task" />
+                <Event_procedure_name v="bang_task" />
               </event>
             </Events>
           </inhrbean>
@@ -1092,8 +1092,8 @@ PE_DEBUGHALT();
             <Enabled v="Y" />
             <Template v="Task" />
             <Properties>
-              <Name v="MagData" />
-              <Entry_point_function v="Task3_task" />
+              <Name v="blop" />
+              <Entry_point_function v="blop_task" />
               <Stack_size v="512" />
               <Priority v="8" />
               <Creation_parameter v="0" />
@@ -1108,33 +1108,7 @@ PE_DEBUGHALT();
             <Events>
               <Event_module_name v="mqx_tasks" />
               <event name="OnTask" v="generate code">
-                <Event_procedure_name v="Task3_task" />
-              </event>
-            </Events>
-          </inhrbean>
-        </boolgroup>
-        <boolgroup name="Task4" v="Enabled">
-          <inhrbean type="MQXLite_task">
-            <Enabled v="Y" />
-            <Template v="Task" />
-            <Properties>
-              <Name v="SendBluetooth" />
-              <Entry_point_function v="Task4_task" />
-              <Stack_size v="512" />
-              <Priority v="8" />
-              <Creation_parameter v="0" />
-              <group name="Attributes">
-                <MQX_AUTO_START_TASK v="Enabled" />
-                <MQX_FLOATING_POINT_TASK v="Disabled" />
-              </group>
-            </Properties>
-            <Methods>
-              <EmptySection_DummyValue />
-            </Methods>
-            <Events>
-              <Event_module_name v="mqx_tasks" />
-              <event name="OnTask" v="generate code">
-                <Event_procedure_name v="Task4_task" />
+                <Event_procedure_name v="blop_task" />
               </event>
             </Events>
           </inhrbean>
@@ -1145,8 +1119,8 @@ PE_DEBUGHALT();
           <Lightweight_Semaphores v="yes" />
           <Lightweight_Events v="no" />
           <Lightweight_Message_Queues v="no" />
-          <Mutexes v="no" />
-          <Lightweight_Timer v="no" />
+          <Mutexes v="yes" />
+          <Lightweight_Timer v="yes" />
           <Kernel_Logging v="no" />
           <Lightweight_Memory_Allocation v="no" />
           <Floating_point_context_saving v="no" />
@@ -1156,7 +1130,7 @@ PE_DEBUGHALT();
         </group>
         <group name="Idle Task">
           <Use_Idle_Task v="yes" />
-          <Enable_sleep_in_idle v="no" />
+          <Enable_sleep_in_idle v="yes" />
           <Enable_idle_counters v="no" />
         </group>
         <group name="User settings">

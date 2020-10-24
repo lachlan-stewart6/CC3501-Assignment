@@ -6,7 +6,7 @@
 **     Version     : Component 01.110, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
+**     Date/Time   : 2020-10-24, 16:38, # CodeGen: 31
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -53,16 +53,14 @@
 #define __task_template_list_h__
 
 /* MQX Lite task IDs */
-#define ACCELDATA_TASK       1U
-#define GYRODATA_TASK        2U
-#define MAGDATA_TASK         3U
-#define SENDBLUETOOTH_TASK   4U
+#define BING_TASK            1U
+#define BANG_TASK            2U
+#define BLOP_TASK            3U
 
 /* MQX Lite task stack sizes */
-#define ACCELDATA_TASK_STACK_SIZE (sizeof(TD_STRUCT) + 512 + PSP_STACK_ALIGNMENT + 1)
-#define GYRODATA_TASK_STACK_SIZE (sizeof(TD_STRUCT) + 512 + PSP_STACK_ALIGNMENT + 1)
-#define MAGDATA_TASK_STACK_SIZE (sizeof(TD_STRUCT) + 512 + PSP_STACK_ALIGNMENT + 1)
-#define SENDBLUETOOTH_TASK_STACK_SIZE (sizeof(TD_STRUCT) + 512 + PSP_STACK_ALIGNMENT + 1)
+#define BING_TASK_STACK_SIZE (sizeof(TD_STRUCT) + 512 + PSP_STACK_ALIGNMENT + 1)
+#define BANG_TASK_STACK_SIZE (sizeof(TD_STRUCT) + 512 + PSP_STACK_ALIGNMENT + 1)
+#define BLOP_TASK_STACK_SIZE (sizeof(TD_STRUCT) + 512 + PSP_STACK_ALIGNMENT + 1)
 
 
 #endif /* __task_template_list_h__ */

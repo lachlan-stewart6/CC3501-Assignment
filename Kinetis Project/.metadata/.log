@@ -1706,3 +1706,37 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY ilg.gnuarmeclipse.debug.gdbjtag 4 0 2020-10-23 21:09:52.680
 !MESSAGE Debug session '87686 Debug' already started. Terminate the first one before restarting.
+
+!ENTRY org.eclipse.cdt.core 1 0 2020-10-24 15:40:28.822
+!MESSAGE Indexed 'CalumMaitland-lab4' (52 sources, 124 headers) in 4.2 sec: 5,687 declarations; 22,139 references; 0 unresolved inclusions; 37 syntax errors; 243 unresolved names (0.87%)
+
+!ENTRY org.eclipse.cdt.dsf.gdb 4 104 2020-10-24 16:10:44.097
+!MESSAGE Program file does not exist
+!STACK 0
+java.io.FileNotFoundException: C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Debug\87686.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:486)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:216)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:166)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SUBENTRY 1 org.eclipse.cdt.dsf.gdb 4 104 2020-10-24 16:10:44.097
+!MESSAGE C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Debug\87686.elf not found
+!STACK 0
+java.io.FileNotFoundException: C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Debug\87686.elf not found
+	at org.eclipse.cdt.dsf.gdb.launching.LaunchUtils.verifyProgramPath(LaunchUtils.java:131)
+	at org.eclipse.cdt.dsf.gdb.launching.GdbLaunchDelegate.checkBinaryDetails(GdbLaunchDelegate.java:298)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.checkBinaryDetails(LaunchConfigurationDelegate.java:486)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugSession(LaunchConfigurationDelegate.java:216)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launchDebugger(LaunchConfigurationDelegate.java:166)
+	at ilg.gnuarmeclipse.debug.gdbjtag.jlink.dsf.LaunchConfigurationDelegate.launch(LaunchConfigurationDelegate.java:138)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:885)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)

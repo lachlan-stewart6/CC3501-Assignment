@@ -6,7 +6,7 @@
 **     Version     : Component 01.110, Driver 01.00, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-24, 13:54, # CodeGen: 23
+**     Date/Time   : 2020-10-24, 16:38, # CodeGen: 31
 **
 **     Copyright : 1997 - 2015 Freescale Semiconductor, Inc. 
 **     All Rights Reserved.
@@ -56,43 +56,33 @@
 /* MQX task template list */
 const TASK_TEMPLATE_STRUCT MQX_template_list[] =
 {
-  /* Task: AccelData */
+  /* Task: bing */
   {
-  /* Task number                      */  ACCELDATA_TASK,
-  /* Entry point                      */  (TASK_FPTR)AccelData_task,
-  /* Stack size                       */  ACCELDATA_TASK_STACK_SIZE,
+  /* Task number                      */  BING_TASK,
+  /* Entry point                      */  (TASK_FPTR)bing_task,
+  /* Stack size                       */  BING_TASK_STACK_SIZE,
   /* Task priority                    */  8U,
-  /* Task name                        */  "acceldata",
+  /* Task name                        */  "bing",
   /* Task attributes                  */  (MQX_AUTO_START_TASK),
   /* Task parameter                   */  (uint32_t)(0)
   },
-  /* Task: GyroData */
+  /* Task: bang */
   {
-  /* Task number                      */  GYRODATA_TASK,
-  /* Entry point                      */  (TASK_FPTR)GyroData_task,
-  /* Stack size                       */  GYRODATA_TASK_STACK_SIZE,
+  /* Task number                      */  BANG_TASK,
+  /* Entry point                      */  (TASK_FPTR)bang_task,
+  /* Stack size                       */  BANG_TASK_STACK_SIZE,
   /* Task priority                    */  8U,
-  /* Task name                        */  "gyrodata",
+  /* Task name                        */  "bang",
   /* Task attributes                  */  (MQX_AUTO_START_TASK),
   /* Task parameter                   */  (uint32_t)(0)
   },
-  /* Task: MagData */
+  /* Task: blop */
   {
-  /* Task number                      */  MAGDATA_TASK,
-  /* Entry point                      */  (TASK_FPTR)MagData_task,
-  /* Stack size                       */  MAGDATA_TASK_STACK_SIZE,
+  /* Task number                      */  BLOP_TASK,
+  /* Entry point                      */  (TASK_FPTR)blop_task,
+  /* Stack size                       */  BLOP_TASK_STACK_SIZE,
   /* Task priority                    */  8U,
-  /* Task name                        */  "magdata",
-  /* Task attributes                  */  (MQX_AUTO_START_TASK),
-  /* Task parameter                   */  (uint32_t)(0)
-  },
-  /* Task: SendBluetooth */
-  {
-  /* Task number                      */  SENDBLUETOOTH_TASK,
-  /* Entry point                      */  (TASK_FPTR)SendBluetooth_task,
-  /* Stack size                       */  SENDBLUETOOTH_TASK_STACK_SIZE,
-  /* Task priority                    */  8U,
-  /* Task name                        */  "sendbluetooth",
+  /* Task name                        */  "blop",
   /* Task attributes                  */  (MQX_AUTO_START_TASK),
   /* Task parameter                   */  (uint32_t)(0)
   },

@@ -1,0 +1,37 @@
+/*
+ * main.h
+ *
+ *  Created on: 24 Oct 2020
+ *      Author: jc493320
+ */
+
+#ifndef SOURCES_MAIN_H_
+#define SOURCES_MAIN_H_
+
+#define QUEUE_LENGTH 2
+
+typedef struct {
+	int msg_id ;
+	int AccX;
+	int AccY;
+	int AccZ;
+	int accAngleX;
+	int accAngleY;
+	int GyroX, GyroY, GyroZ;
+	int gyroAngleX, gyroAngleY , gyroAngleZ;
+	int MagX = 0, MagY = 0, MagZ = 0;
+	int yaw = 0, pitch = 0, roll = 0;
+	byte acc[6];
+	byte gyro[6];
+	byte mag[6];
+} Message ;
+
+typedef struct {
+	LWMSGQ_STRUCT header;
+	Message msgs [QUEUE_LENGTH];
+}MessageQueue;
+
+
+
+
+#endif /* SOURCES_MAIN_H_ */
