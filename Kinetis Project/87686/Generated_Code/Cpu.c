@@ -8,7 +8,7 @@
 **     Repository  : Kinetis
 **     Datasheet   : K20P144M72SF1RM Rev. 0, Nov 2011
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 21:21, # CodeGen: 21
+**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
 **     Abstract    :
 **
 **     Settings    :
@@ -303,7 +303,9 @@
 
 /* MODULE Cpu. */
 
-/* {Default RTOS Adapter} No RTOS includes */
+/* MQX Lite include files */
+#include "mqxlite.h"
+#include "mqxlite_prv.h"
 #include "CI2C1.h"
 #include "IntI2cLdd1.h"
 #include "Bluetooth_Term.h"
@@ -315,11 +317,14 @@
 #include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
+#include "MQX1.h"
+#include "SystemTimer1.h"
 #include "PE_Types.h"
 #include "PE_Error.h"
 #include "PE_Const.h"
 #include "IO_Map.h"
 #include "Events.h"
+#include "mqx_tasks.h"
 #include "Cpu.h"
 
 #ifdef __cplusplus
@@ -350,7 +355,7 @@ void Cpu_SetBASEPRI(uint32_t Level);
 **         This method is internal. It is used by Processor Expert only.
 ** ===================================================================
 */
-PE_ISR(Cpu_INT_NMIInterrupt)
+void Cpu_INT_NMIInterrupt(void)
 {
   Cpu_OnNMIINT();
 }
@@ -483,6 +488,7 @@ void PE_low_level_init(void)
   #ifdef PEX_RTOS_INIT
     PEX_RTOS_INIT();                   /* Initialization of the selected RTOS. Macro is defined by the RTOS component. */
   #endif
+  /* {MQXLite RTOS Adapter} Set new interrupt vector (function handler and ISR parameter) */
       /* Initialization of the SIM module */
   /* PORTA_PCR4: ISF=0,MUX=7 */
   PORTA_PCR4 = (uint32_t)((PORTA_PCR4 & (uint32_t)~(uint32_t)(
@@ -535,8 +541,6 @@ void PE_low_level_init(void)
   (void)RealTimeLdd1_Init(NULL);
   /* ### RealTime_LDD "RealTimeLdd2" component auto initialization. Auto initialization feature can be disabled by component property "Auto initialization". */
   (void)RealTimeLdd2_Init(NULL);
-  /* Enable interrupts of the given priority level */
-  Cpu_SetBASEPRI(0U);
 }
   /* Flash configuration field */
   __attribute__ ((section (".cfmconfig"))) const uint8_t _cfm[0x10] = {

@@ -30,6 +30,7 @@
 /* Including needed modules to compile this module/procedure */
 #include "Cpu.h"
 #include "Events.h"
+#include "mqx_tasks.h"
 #include "CI2C1.h"
 #include "IntI2cLdd1.h"
 #include "Bluetooth_Term.h"
@@ -41,6 +42,8 @@
 #include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
+#include "MQX1.h"
+#include "SystemTimer1.h"
 /* Including shared modules, which are used for whole project */
 #include "PE_Types.h"
 #include "PE_Error.h"

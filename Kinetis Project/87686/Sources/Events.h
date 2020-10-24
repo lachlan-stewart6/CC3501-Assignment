@@ -44,6 +44,8 @@
 #include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
+#include "MQX1.h"
+#include "SystemTimer1.h"
 
 #ifdef __cplusplus
 extern "C" {

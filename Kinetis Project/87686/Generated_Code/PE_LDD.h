@@ -6,7 +6,7 @@
 **     Version     : Component 01.000, Driver 01.04, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 21:21, # CodeGen: 21
+**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
 **     Abstract    :
 **
 **     Settings    :
@@ -72,6 +72,8 @@
 #include "BluetoothTimer.h"
 #include "RealTimeLdd2.h"
 #include "TU2.h"
+#include "MQX1.h"
+#include "SystemTimer1.h"
 
 
 /*

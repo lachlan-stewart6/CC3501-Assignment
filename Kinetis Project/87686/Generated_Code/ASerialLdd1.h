@@ -7,7 +7,7 @@
 **     Version     : Component 01.188, Driver 01.12, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 14:36, # CodeGen: 13
+**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
 **     Abstract    :
 **         This component "Serial_LDD" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -158,6 +158,7 @@ typedef struct {
   uint16_t OutSentDataNum;             /*!< The counter of sent characters */
   uint8_t *OutDataPtr;                 /*!< The buffer pointer for data to be transmitted */
   uint16_t OutDataNumReq;              /*!< The counter of characters to be send by SendBlock() */
+  LDD_RTOS_TISRVectorSettings SavedISRSettings; /* {MQXLite RTOS Adapter} Saved settings of allocated interrupt vector */
   LDD_TUserData *UserDataPtr;          /*!< Pointer to user data */
 } ASerialLdd1_TDeviceData;
 
@@ -284,8 +285,8 @@ LDD_TError ASerialLdd1_SendBlock(LDD_TDeviceData *DeviceDataPtr, LDD_TData *Buff
 **         This method is internal. It is used by Processor Expert only.
 ** ===================================================================
 */
-/* {Default RTOS Adapter} ISR function prototype */
-PE_ISR(ASerialLdd1_Interrupt);
+/* {MQXLite RTOS Adapter} ISR function prototype */
+void ASerialLdd1_Interrupt(LDD_RTOS_TISRParameter _isrParameter);
 
 /*
 ** ===================================================================

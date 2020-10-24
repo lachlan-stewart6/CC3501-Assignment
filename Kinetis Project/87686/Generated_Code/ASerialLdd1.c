@@ -7,7 +7,7 @@
 **     Version     : Component 01.188, Driver 01.12, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 14:36, # CodeGen: 13
+**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
 **     Abstract    :
 **         This component "Serial_LDD" implements an asynchronous serial
 **         communication. The component supports different settings of
@@ -118,7 +118,9 @@
 /* MODULE ASerialLdd1. */
 /*lint -save  -e926 -e927 -e928 -e929 -e572 Disable MISRA rule (11.4,12.8) checking. */
 
-/* {Default RTOS Adapter} No RTOS includes */
+/* MQX Lite include files */
+#include "mqxlite.h"
+#include "mqxlite_prv.h"
 #include "ASerialLdd1.h"
 #include "Inhr1.h"
 #include "UART_PDD.h"
@@ -131,12 +133,8 @@ extern "C" {
 /*! The mask of available events used to enable/disable events during runtime. */
 #define AVAILABLE_EVENTS_MASK (LDD_SERIAL_ON_BLOCK_RECEIVED | LDD_SERIAL_ON_BLOCK_SENT | LDD_SERIAL_ON_BREAK | LDD_SERIAL_ON_ERROR)
 
-/* {Default RTOS Adapter} Static object used for simulation of dynamic driver memory allocation */
+/* {MQXLite RTOS Adapter} Static object used for simulation of dynamic driver memory allocation */
 static ASerialLdd1_TDeviceData DeviceDataPrv__DEFAULT_RTOS_ALLOC;
-/* {Default RTOS Adapter} Global variable used for passing a parameter into ISR */
-static ASerialLdd1_TDeviceDataPtr INT_UART1_RX_TX__DEFAULT_RTOS_ISRPARAM;
-/* {Default RTOS Adapter} Global variable used for passing a parameter into ISR */
-static ASerialLdd1_TDeviceDataPtr INT_UART1_ERR__DEFAULT_RTOS_ISRPARAM;
 
 /*
 ** ===================================================================
@@ -163,7 +161,7 @@ LDD_TDeviceData* ASerialLdd1_Init(LDD_TUserData *UserDataPtr)
 {
   /* Allocate device structure */
   ASerialLdd1_TDeviceDataPtr DeviceDataPrv;
-  /* {Default RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
+  /* {MQXLite RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
   DeviceDataPrv = &DeviceDataPrv__DEFAULT_RTOS_ALLOC;
 
   /* Clear the receive counters and pointer */
@@ -176,10 +174,14 @@ LDD_TDeviceData* ASerialLdd1_Init(LDD_TUserData *UserDataPtr)
   DeviceDataPrv->OutDataPtr = NULL;    /* Clear the buffer pointer for data to be transmitted */
   DeviceDataPrv->UserDataPtr = UserDataPtr; /* Store the RTOS device structure */
   /* Allocate interrupt vectors */
-  /* {Default RTOS Adapter} Set interrupt vector: IVT is static, ISR parameter is passed by the global variable */
-  INT_UART1_RX_TX__DEFAULT_RTOS_ISRPARAM = DeviceDataPrv;
-  /* {Default RTOS Adapter} Set interrupt vector: IVT is static, ISR parameter is passed by the global variable */
-  INT_UART1_ERR__DEFAULT_RTOS_ISRPARAM = DeviceDataPrv;
+  /* {MQXLite RTOS Adapter} Save old and set new interrupt vector (function handler and ISR parameter) */
+  /* Note: Exception handler for interrupt is not saved, because it is not modified */
+  DeviceDataPrv->SavedISRSettings.isrData = _int_get_isr_data(LDD_ivIndex_INT_UART1_RX_TX);
+  DeviceDataPrv->SavedISRSettings.isrFunction = _int_install_isr(LDD_ivIndex_INT_UART1_RX_TX, ASerialLdd1_Interrupt, DeviceDataPrv);
+  /* {MQXLite RTOS Adapter} Save old and set new interrupt vector (function handler and ISR parameter) */
+  /* Note: Exception handler for interrupt is not saved, because it is not modified */
+  DeviceDataPrv->SavedISRSettings.isrData = _int_get_isr_data(LDD_ivIndex_INT_UART1_ERR);
+  DeviceDataPrv->SavedISRSettings.isrFunction = _int_install_isr(LDD_ivIndex_INT_UART1_ERR, ASerialLdd1_Interrupt, DeviceDataPrv);
   /* SIM_SCGC4: UART1=1 */
   SIM_SCGC4 |= SIM_SCGC4_UART1_MASK;
   /* PORTE_PCR1: ISF=0,MUX=3 */
@@ -284,13 +286,13 @@ LDD_TError ASerialLdd1_ReceiveBlock(LDD_TDeviceData *DeviceDataPtr, LDD_TData *B
   if (DeviceDataPrv->InpDataNumReq != 0x00U) { /* Is the previous receive operation pending? */
     return ERR_BUSY;                   /* If yes then error */
   }
-  /* {Default RTOS Adapter} Critical section begin, general PE function is used */
-  EnterCritical();
+  /* {MQXLite RTOS Adapter} Critical section begin (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_disable();
   DeviceDataPrv->InpDataPtr = (uint8_t*)BufferPtr; /* Store a pointer to the input data. */
   DeviceDataPrv->InpDataNumReq = Size; /* Store a number of characters to be received. */
   DeviceDataPrv->InpRecvDataNum = 0x00U; /* Set number of received characters to zero. */
-  /* {Default RTOS Adapter} Critical section end, general PE function is used */
-  ExitCritical();
+  /* {MQXLite RTOS Adapter} Critical section ends (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_enable();
   return ERR_OK;                       /* OK */
 }
 
@@ -344,15 +346,15 @@ LDD_TError ASerialLdd1_SendBlock(LDD_TDeviceData *DeviceDataPtr, LDD_TData *Buff
   if (DeviceDataPrv->OutDataNumReq != 0x00U) { /* Is the previous transmit operation pending? */
     return ERR_BUSY;                   /* If yes then error */
   }
-  /* {Default RTOS Adapter} Critical section begin, general PE function is used */
-  EnterCritical();
+  /* {MQXLite RTOS Adapter} Critical section begin (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_disable();
   DeviceDataPrv->OutDataPtr = (uint8_t*)BufferPtr; /* Set a pointer to the output data. */
   DeviceDataPrv->OutDataNumReq = Size; /* Set the counter of characters to be sent. */
   DeviceDataPrv->OutSentDataNum = 0x00U; /* Clear the counter of sent characters. */
   DeviceDataPrv->SerFlag |= ENABLED_TX_INT; /* Set the flag ENABLED_TX_INT */
   UART_PDD_EnableInterrupt(UART1_BASE_PTR, UART_PDD_INTERRUPT_TRANSMITTER); /* Enable TX interrupt */
-  /* {Default RTOS Adapter} Critical section end, general PE function is used */
-  ExitCritical();
+  /* {MQXLite RTOS Adapter} Critical section ends (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_enable();
   return ERR_OK;                       /* OK */
 }
 
@@ -417,10 +419,10 @@ static void InterruptTx(ASerialLdd1_TDeviceDataPtr DeviceDataPrv)
 **         This method is internal. It is used by Processor Expert only.
 ** ===================================================================
 */
-PE_ISR(ASerialLdd1_Interrupt)
+void ASerialLdd1_Interrupt(LDD_RTOS_TISRParameter _isrParameter)
 {
-  /* {Default RTOS Adapter} ISR parameter is passed through the global variable */
-  ASerialLdd1_TDeviceDataPtr DeviceDataPrv = INT_UART1_RX_TX__DEFAULT_RTOS_ISRPARAM;
+  /* {MQXLite RTOS Adapter} ISR parameter is passed as parameter from RTOS interrupt dispatcher */
+  ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)_isrParameter;
   register uint32_t StatReg = UART_PDD_ReadInterruptStatusReg(UART1_BASE_PTR); /* Read status register */
   register uint16_t OnErrorFlags = 0U; /* Temporary variable for flags */
   register uint8_t  OnBreakFlag = 0U;  /* Temporary variable flag for OnBreak event */
@@ -496,12 +498,12 @@ LDD_TError ASerialLdd1_GetError(LDD_TDeviceData *DeviceDataPtr, LDD_SERIAL_TErro
 {
   ASerialLdd1_TDeviceDataPtr DeviceDataPrv = (ASerialLdd1_TDeviceDataPtr)DeviceDataPtr;
 
-  /* {Default RTOS Adapter} Critical section begin, general PE function is used */
-  EnterCritical();
+  /* {MQXLite RTOS Adapter} Critical section begin (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_disable();
   *ErrorPtr = DeviceDataPrv->ErrFlag;
   DeviceDataPrv->ErrFlag = 0x00U;      /* Reset error flags */
-  /* {Default RTOS Adapter} Critical section end, general PE function is used */
-  ExitCritical();
+  /* {MQXLite RTOS Adapter} Critical section ends (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_enable();
   return ERR_OK;                       /* OK */
 }
 

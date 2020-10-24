@@ -37,6 +37,12 @@
   <PATHS>
     <LinkerCommandFile>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Project_Settings\Linker_Files\ProcessorExpert.ld</LinkerCommandFile>
     <IncludePaths>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\config\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\core\M4\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\compiler\cwgcc\</Path>
       <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\PDD\</Path>
       <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\IO_Map\</Path>
       <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\</Path>
@@ -44,8 +50,12 @@
     </IncludePaths>
     <SourceCodePaths>
       <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\config\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\</Path>
       <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Project_Settings\Startup_Code\</Path>
       <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\</Path>
+      <Path>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\core\M4\</Path>
     </SourceCodePaths>
   </PATHS>
   <FILES>
@@ -58,15 +68,54 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\GyroTimer.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Inhr1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\IntI2cLdd1.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\MQX1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\PE_LDD.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\RealTimeLdd1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\RealTimeLdd2.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\SystemTimer1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU1.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU2.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Vectors.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\config\task_template_list.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\idletask.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\int.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\klog.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\lwevent.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\lwlog.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\lwmem.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\lwmsgq.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\lwsem.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\lwtimer.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\mqx_utils.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\mqxlite.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\mutex.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\qu_test.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\sched.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\task.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\kernel\time_ticks.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\cortex.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\int_gkis.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\int_inst.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\int_kisr.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\int_pvta.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\int_unx.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\int_vtab.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\int_xcpt.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\mem_zero.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_iinit.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_supp.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_tiad.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_tinm.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_tipr.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_tisu.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\sc_irdyq.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\stack_bu.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\stack_de.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\stack_st.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Project_Settings\Startup_Code\startup.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\Events.c</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\main.c</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\mqx_tasks.c</PathName>
     </GeneratedCs>
     <GeneratedHs>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\ASerialLdd1.h</PathName>
@@ -78,15 +127,58 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\IO_Map.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\Inhr1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\IntI2cLdd1.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\MQX1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\PE_Const.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\PE_Error.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\PE_LDD.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\PE_Types.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\RealTimeLdd1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\RealTimeLdd2.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\SystemTimer1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU1.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Generated_Code\TU2.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\config\task_template_list.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\config\user_config.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\klog.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\log.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwevent.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwevent_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwlog.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwlog_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwmem.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwmem_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwmsgq.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwmsgq_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwsem.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwsem_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwtimer.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\lwtimer_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqx_cnfg.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqx_cpudef.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqx_inc.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqx_macros.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqx_str.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqxlite.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqxlite_cnfg.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mqxlite_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mutex.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\mutex_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\include\queue.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\compiler\cwgcc\asm_mac.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\compiler\cwgcc\comp.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\cortex.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\kinetis.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_comp.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_cpu.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_cpudef.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_prv.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_supp.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psp_ticks.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psplite.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\psptypes.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\Events.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\ICM20948.h</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Sources\mqx_tasks.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\IO_Map\MK20D7.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\PDD\ADC_PDD.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\PDD\CAN_PDD.h</PathName>
@@ -121,6 +213,10 @@
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\PDD\VREF_PDD.h</PathName>
       <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\Static_Code\PDD\WDOG_PDD.h</PathName>
     </GeneratedHs>
+    <GeneratedASMs>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\core\M4\boot.S</PathName>
+      <PathName>C:\Users\jc493320\Documents\GitHub\CC3501-Assignment\Kinetis Project\87686\MQXLITE\psp\cortex_m\core\M4\dispatch.S</PathName>
+    </GeneratedASMs>
   </FILES>
   <OPTIONS>
   </OPTIONS>

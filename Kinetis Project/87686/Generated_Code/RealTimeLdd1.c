@@ -7,7 +7,7 @@
 **     Version     : Component 01.007, Driver 01.01, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 20:57, # CodeGen: 19
+**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
 **     Abstract    :
 **          This component "RealTime_LDD" implements a free running counter
 **          for time measurement.
@@ -93,7 +93,9 @@
 /* MODULE RealTimeLdd1. */
 
 #include "RealTimeLdd1.h"
-/* {Default RTOS Adapter} No RTOS includes */
+/* MQX Lite include files */
+#include "mqxlite.h"
+#include "mqxlite_prv.h"
 
 #ifdef __cplusplus
 extern "C" {
@@ -109,7 +111,7 @@ typedef struct {
 
 typedef RealTimeLdd1_TDeviceData *RealTimeLdd1_TDeviceDataPtr; /* Pointer to the device data structure. */
 
-/* {Default RTOS Adapter} Static object used for simulation of dynamic driver memory allocation */
+/* {MQXLite RTOS Adapter} Static object used for simulation of dynamic driver memory allocation */
 static RealTimeLdd1_TDeviceData DeviceDataPrv__DEFAULT_RTOS_ALLOC;
 
 /*
@@ -140,7 +142,7 @@ LDD_TDeviceData* RealTimeLdd1_Init(LDD_TUserData *UserDataPtr)
 {
   /* Allocate device structure */
   RealTimeLdd1_TDeviceData *DeviceDataPrv;
-  /* {Default RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
+  /* {MQXLite RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
   DeviceDataPrv = &DeviceDataPrv__DEFAULT_RTOS_ALLOC;
   DeviceDataPrv->UserDataPtr = UserDataPtr; /* Store the RTOS device structure */
   DeviceDataPrv->TimerTicks = 0U;      /* Counter of timer ticks */
@@ -153,7 +155,7 @@ LDD_TDeviceData* RealTimeLdd1_Init(LDD_TUserData *UserDataPtr)
     /* Unregistration of the device structure */
     PE_LDD_UnregisterDeviceStructure(PE_LDD_COMPONENT_RealTimeLdd1_ID);
     /* Deallocation of the device structure */
-    /* {Default RTOS Adapter} Driver memory deallocation: Dynamic allocation is simulated, no deallocation code is generated */
+    /* {MQXLite RTOS Adapter} Driver memory deallocation: Dynamic allocation is simulated, no deallocation code is generated */
     return NULL;                       /* If so, then the TimeDate initialization is also unsuccessful */
   }
   return ((LDD_TDeviceData *)DeviceDataPrv); /* Return pointer to the device data structure */
@@ -180,13 +182,13 @@ LDD_TError RealTimeLdd1_Reset(LDD_TDeviceData *DeviceDataPtr)
 {
   RealTimeLdd1_TDeviceData *DeviceDataPrv = (RealTimeLdd1_TDeviceData *)DeviceDataPtr;
 
-  /* {Default RTOS Adapter} Critical section begin, general PE function is used */
-  EnterCritical();
+  /* {MQXLite RTOS Adapter} Critical section begin (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_disable();
   (void)TU1_ResetCounter(DeviceDataPrv->LinkedDeviceDataPtr); /* Reset counter of TimerUnit */
   DeviceDataPrv->TimerTicks =  0U;     /* Reset counter of timer ticks */
   DeviceDataPrv->Overflow = FALSE;     /* Reset counter overflow flag */
-  /* {Default RTOS Adapter} Critical section end, general PE function is used */
-  ExitCritical();
+  /* {MQXLite RTOS Adapter} Critical section ends (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_enable();
   return ERR_OK;
 }
 
@@ -220,12 +222,12 @@ LDD_TError RealTimeLdd1_GetTimeUS(LDD_TDeviceData *DeviceDataPtr, uint16_t *Time
   bool CopyOverflow;                   /* Working copy of variable Overflow */
   LDD_RealTime_Tfloat rtval;           /* Result of multiplication */
 
-  /* {Default RTOS Adapter} Critical section begin, general PE function is used */
-  EnterCritical();
+  /* {MQXLite RTOS Adapter} Critical section begin (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_disable();
   CopyTicks = DeviceDataPrv->TimerTicks; /* Loading actual number of timer ticks */
   CopyOverflow = DeviceDataPrv->Overflow; /* Loading actual state of "overflow flag" */
-  /* {Default RTOS Adapter} Critical section end, general PE function is used */
-  ExitCritical();
+  /* {MQXLite RTOS Adapter} Critical section ends (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_enable();
   if (CopyOverflow) {                  /* Testing counter overflow */
     return ERR_OVERFLOW;               /* If yes then error */
   }
@@ -269,12 +271,12 @@ LDD_TError RealTimeLdd1_GetTimeMS(LDD_TDeviceData *DeviceDataPtr, uint16_t *Time
   bool CopyOverflow;                   /* Working copy of variable Overflow */
   LDD_RealTime_Tfloat rtval;           /* Result of multiplication */
 
-  /* {Default RTOS Adapter} Critical section begin, general PE function is used */
-  EnterCritical();
+  /* {MQXLite RTOS Adapter} Critical section begin (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_disable();
   CopyTicks = DeviceDataPrv->TimerTicks; /* Loading actual number of timer ticks */
   CopyOverflow = DeviceDataPrv->Overflow; /* Loading actual state of "overflow flag" */
-  /* {Default RTOS Adapter} Critical section end, general PE function is used */
-  ExitCritical();
+  /* {MQXLite RTOS Adapter} Critical section ends (RTOS function call is defined by MQXLite RTOS Adapter property) */
+  _int_enable();
   if (CopyOverflow) {                  /* Testing counter overflow */
     return ERR_OVERFLOW;               /* If yes then error */
   }

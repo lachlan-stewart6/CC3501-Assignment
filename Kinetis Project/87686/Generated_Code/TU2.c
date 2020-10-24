@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 20:59, # CodeGen: 20
+**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -100,7 +100,9 @@
 
 #include "RealTimeLdd2.h"
 #include "TU2.h"
-/* {Default RTOS Adapter} No RTOS includes */
+/* MQX Lite include files */
+#include "mqxlite.h"
+#include "mqxlite_prv.h"
 #include "IO_Map.h"
 
 #ifdef __cplusplus
@@ -109,6 +111,7 @@ extern "C" {
 
 
 typedef struct {
+  LDD_RTOS_TISRVectorSettings SavedISRSettings_TUInterrupt; /* {MQXLite RTOS Adapter} Saved settings of allocated interrupt vector */
   LDD_TEventMask EnEvents;             /* Enable/Disable events mask */
   uint8_t InitCntr;                    /* Number of initialization */
   LDD_TUserData *UserDataPtr;          /* RTOS device data structure */
@@ -116,10 +119,8 @@ typedef struct {
 
 typedef TU2_TDeviceData *TU2_TDeviceDataPtr; /* Pointer to the device data structure. */
 
-/* {Default RTOS Adapter} Static object used for simulation of dynamic driver memory allocation */
+/* {MQXLite RTOS Adapter} Static object used for simulation of dynamic driver memory allocation */
 static TU2_TDeviceData DeviceDataPrv__DEFAULT_RTOS_ALLOC;
-/* {Default RTOS Adapter} Global variable used for passing a parameter into ISR */
-static TU2_TDeviceDataPtr INT_FTM1__DEFAULT_RTOS_ISRPARAM;
 
 #define AVAILABLE_EVENTS_MASK (LDD_TEventMask)(LDD_TIMERUNIT_ON_COUNTER_RESTART)
 
@@ -154,7 +155,7 @@ LDD_TDeviceData* TU2_Init(LDD_TUserData *UserDataPtr)
 
   if (PE_LDD_DeviceDataList[PE_LDD_COMPONENT_TU2_ID] == NULL) {
     /* Allocate device structure */
-    /* {Default RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
+    /* {MQXLite RTOS Adapter} Driver memory allocation: Dynamic allocation is simulated by a pointer to the static object */
     DeviceDataPrv = &DeviceDataPrv__DEFAULT_RTOS_ALLOC;
     DeviceDataPrv->UserDataPtr = UserDataPtr; /* Store the RTOS device structure */
     DeviceDataPrv->InitCntr = 1U;      /* First initialization */
@@ -167,8 +168,10 @@ LDD_TDeviceData* TU2_Init(LDD_TUserData *UserDataPtr)
     return ((LDD_TDeviceData *)DeviceDataPrv); /* Return pointer to the device data structure */
   }
   /* Interrupt vector(s) allocation */
-  /* {Default RTOS Adapter} Set interrupt vector: IVT is static, ISR parameter is passed by the global variable */
-  INT_FTM1__DEFAULT_RTOS_ISRPARAM = DeviceDataPrv;
+  /* {MQXLite RTOS Adapter} Save old and set new interrupt vector (function handler and ISR parameter) */
+  /* Note: Exception handler for interrupt is not saved, because it is not modified */
+  DeviceDataPrv->SavedISRSettings_TUInterrupt.isrData = _int_get_isr_data(LDD_ivIndex_INT_FTM1);
+  DeviceDataPrv->SavedISRSettings_TUInterrupt.isrFunction = _int_install_isr(LDD_ivIndex_INT_FTM1, TU2_Interrupt, DeviceDataPrv);
   /* SIM_SCGC6: FTM1=1 */
   SIM_SCGC6 |= SIM_SCGC6_FTM1_MASK;
   /* FTM1_MODE: ??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,??=0,FAULTIE=0,FAULTM=0,CAPTEST=0,PWMSYNC=0,WPDIS=1,INIT=0,FTMEN=0 */
@@ -235,10 +238,10 @@ LDD_TError TU2_ResetCounter(LDD_TDeviceData *DeviceDataPtr)
 **         This method is internal. It is used by Processor Expert only.
 ** ===================================================================
 */
-PE_ISR(TU2_Interrupt)
+void TU2_Interrupt(LDD_RTOS_TISRParameter _isrParameter)
 {
-  /* {Default RTOS Adapter} ISR parameter is passed through the global variable */
-  TU2_TDeviceDataPtr DeviceDataPrv = INT_FTM1__DEFAULT_RTOS_ISRPARAM;
+  /* {MQXLite RTOS Adapter} ISR parameter is passed as parameter from RTOS interrupt dispatcher */
+  TU2_TDeviceDataPtr DeviceDataPrv = (TU2_TDeviceDataPtr)_isrParameter;
 
   LDD_TEventMask State = 0U;
 

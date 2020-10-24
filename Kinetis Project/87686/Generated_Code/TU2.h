@@ -7,7 +7,7 @@
 **     Version     : Component 01.164, Driver 01.11, CPU db: 3.00.000
 **     Repository  : Kinetis
 **     Compiler    : GNU C Compiler
-**     Date/Time   : 2020-10-23, 20:59, # CodeGen: 20
+**     Date/Time   : 2020-10-24, 13:51, # CodeGen: 22
 **     Abstract    :
 **          This TimerUnit component provides a low level API for unified hardware access across
 **          various timer devices using the Prescaler-Counter-Compare-Capture timer structure.
@@ -198,8 +198,8 @@ LDD_TError TU2_ResetCounter(LDD_TDeviceData *DeviceDataPtr);
 **         This method is internal. It is used by Processor Expert only.
 ** ===================================================================
 */
-/* {Default RTOS Adapter} ISR function prototype */
-PE_ISR(TU2_Interrupt);
+/* {MQXLite RTOS Adapter} ISR function prototype */
+void TU2_Interrupt(LDD_RTOS_TISRParameter _isrParameter);
 
 /* END TU2. */
 
